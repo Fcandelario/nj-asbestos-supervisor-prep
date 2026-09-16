@@ -35,6 +35,7 @@
   <div class="mode-grid">
     <button class="mode-card" data-mode="practice"><strong>Practice</strong><span>All topics, instant explanations</span></button>
     <button class="mode-card" data-mode="exam"><strong>50-Q Mock Exam</strong><span>Weighted to the NJDOH blueprint</span></button>
+    <button class="mode-card" data-mode="exam100"><strong>100-Q Practice Exam</strong><span>Longer practice using the NJDOH topic weights</span></button>
     <button id="mistakesBtn" class="mode-card"><strong>Review Mistakes</strong><span>Drill questions you have missed</span></button>
   </div>
 
@@ -51,10 +52,19 @@
 <section id="quiz" class="panel hidden">
   <div class="quiz-top"><button id="backBtn" class="ghost">← Home</button><div id="progressText"></div></div>
   <div class="progress"><div id="progressBar"></div></div>
-  <p id="category" class="eyebrow"></p><h2 id="question"></h2>
-  <div id="answers" class="answers"></div>
-  <div id="feedback" class="feedback hidden"></div>
-  <button id="nextBtn" class="primary hidden">Next question</button>
+  <div class="study-layout">
+    <div class="question-main">
+      <p id="category" class="eyebrow"></p><h2 id="question"></h2>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="nextBtn" class="primary hidden">Next question</button>
+    </div>
+    <aside id="acronymPanel" class="acronym-panel" aria-label="Acronyms in this question">
+      <h3>Acronym guide</h3>
+      <p class="side-hint">Terms used in this question and section.</p>
+      <div id="acronymList"></div>
+    </aside>
+  </div>
 </section>
 
 <section id="results" class="panel hidden">
@@ -65,5 +75,5 @@
 </section>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="questions.js"></script><script src="app.js"></script>
+<script src="questions.js"></script><script src="questions-extra.js"></script><script src="study-guide.js"></script><script src="app.js"></script>
 </body></html>
