@@ -3,71 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#07101d">
   <title>NJ Asbestos Supervisor Prep</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <header>
-      <div>
-        <p class="eyebrow">NJ ASBESTOS SUPERVISOR</p>
-        <h1>Exam Prep</h1>
-        <p class="sub">Practice questions aligned to the NJDOH supervisor exam content outline.</p>
-      </div>
-      <button id="resetProgress" class="ghost">Reset progress</button>
-    </header>
+<main class="app">
+<header>
+  <div><p class="eyebrow">NJ ASBESTOS SUPERVISOR</p><h1>Exam Prep</h1>
+  <p class="sub">Practice by NJ exam topic, take weighted mock exams, and review missed questions.</p></div>
+  <button id="resetProgress" class="ghost">Reset progress</button>
+</header>
 
-    <section id="home" class="panel">
-      <div class="stats">
-        <div><strong id="answeredStat">0</strong><span>Answered</span></div>
-        <div><strong id="accuracyStat">—</strong><span>Accuracy</span></div>
-        <div><strong id="bestStat">—</strong><span>Best exam</span></div>
-      </div>
+<section id="home" class="panel">
+  <div class="stats">
+    <div><strong id="answeredStat">0</strong><span>Answered</span></div>
+    <div><strong id="accuracyStat">—</strong><span>Accuracy</span></div>
+    <div><strong id="bestStat">—</strong><span>Best exam</span></div>
+    <div><strong id="missedStat">0</strong><span>To review</span></div>
+  </div>
 
-      <h2>Choose a mode</h2>
-      <div class="mode-grid">
-        <button class="mode-card" data-mode="practice">
-          <strong>Practice</strong>
-          <span>Immediate answer + explanation</span>
-        </button>
-        <button class="mode-card" data-mode="exam">
-          <strong>Mock Exam</strong>
-          <span>50 questions, results at the end</span>
-        </button>
-      </div>
+  <h2>Study</h2>
+  <div class="mode-grid">
+    <button class="mode-card" data-mode="practice"><strong>Practice</strong><span>All topics, instant explanations</span></button>
+    <button class="mode-card" data-mode="exam"><strong>50-Q Mock Exam</strong><span>Weighted to the NJDOH blueprint</span></button>
+    <button id="mistakesBtn" class="mode-card"><strong>Review Mistakes</strong><span>Drill questions you have missed</span></button>
+  </div>
 
-      <h2>Practice by topic</h2>
-      <div id="topics" class="topics"></div>
-      <p class="note">This is an independent study tool, not an official NJDOH exam and does not contain actual state exam questions.</p>
-    </section>
+  <h2>Practice by topic</h2>
+  <div id="topics" class="topics"></div>
 
-    <section id="quiz" class="panel hidden">
-      <div class="quiz-top">
-        <button id="backBtn" class="ghost">← Home</button>
-        <div id="progressText"></div>
-      </div>
-      <div class="progress"><div id="progressBar"></div></div>
-      <p id="category" class="eyebrow"></p>
-      <h2 id="question"></h2>
-      <div id="answers" class="answers"></div>
-      <div id="feedback" class="feedback hidden"></div>
-      <button id="nextBtn" class="primary hidden">Next question</button>
-    </section>
+  <details class="blueprint">
+    <summary>NJ Supervisor exam blueprint</summary>
+    <div id="weights"></div>
+  </details>
+  <p class="note">Independent study tool. Not affiliated with NJDOH and does not contain actual state exam questions.</p>
+</section>
 
-    <section id="results" class="panel hidden">
-      <p class="eyebrow">RESULTS</p>
-      <h2 id="resultTitle"></h2>
-      <div id="scoreCircle" class="score-circle"></div>
-      <p id="resultMessage"></p>
-      <div id="breakdown"></div>
-      <div class="result-actions">
-        <button id="retryBtn" class="primary">Try again</button>
-        <button id="homeBtn" class="ghost">Home</button>
-      </div>
-    </section>
-  </main>
-  <script src="questions.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+<section id="quiz" class="panel hidden">
+  <div class="quiz-top"><button id="backBtn" class="ghost">← Home</button><div id="progressText"></div></div>
+  <div class="progress"><div id="progressBar"></div></div>
+  <p id="category" class="eyebrow"></p><h2 id="question"></h2>
+  <div id="answers" class="answers"></div>
+  <div id="feedback" class="feedback hidden"></div>
+  <button id="nextBtn" class="primary hidden">Next question</button>
+</section>
+
+<section id="results" class="panel hidden">
+  <p class="eyebrow">RESULTS</p><h2 id="resultTitle"></h2>
+  <div id="scoreCircle" class="score-circle"></div><p id="resultMessage"></p>
+  <h3>Topic breakdown</h3><div id="breakdown"></div>
+  <div class="result-actions"><button id="retryBtn" class="primary">Try again</button><button id="homeBtn" class="ghost">Home</button></div>
+</section>
+</main>
+<script src="questions.js"></script><script src="app.js"></script>
+</body></html>

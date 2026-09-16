@@ -1,40 +1,29 @@
-# NJ Asbestos Supervisor Prep
+# NJ Asbestos Supervisor Prep — v2
 
-A lightweight, mobile-friendly study site for the New Jersey Asbestos Supervisor examination.
+Static study site for the New Jersey Asbestos Supervisor exam.
 
-## Features
-- Practice mode with immediate explanations
-- 50-question mock exam mode
-- Topic-specific practice
-- Local progress tracking
-- Score breakdown by NJDOH exam content category
-- 70% passing-score reference
-- No server or database required
+## v2 changes
+- 50-question mock exams generated according to the published NJDOH Supervisor exam topic percentages
+- Answer choices randomized
+- Missed-question tracking
+- "Review Mistakes" study mode
+- Per-topic result breakdown
+- Topic buttons display exam weight and available question count
+- Browser-local progress storage
 
-## Run locally
-Just open `index.html` in a modern browser.
+## Deploy to your existing GitHub repo
 
-For a local web server:
+Replace the existing files with these files, then:
+
 ```bash
-python3 -m http.server 8080
-```
-Then visit `http://localhost:8080`.
-
-## Push to GitHub
-```bash
-git init
 git add .
-git commit -m "Initial NJ asbestos supervisor prep site"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/nj-asbestos-supervisor-prep.git
-git push -u origin main
+git commit -m "Add weighted mock exams and mistake review"
+git push
 ```
+
+GitHub Pages will update from the branch/folder configured in your repository settings.
 
 ## Important
-This is an independent study aid. It is not affiliated with NJDOH and does not contain actual NJ state examination questions. Questions are original practice questions based on public exam content areas and public regulatory guidance.
+Progress remains browser/device based because it uses localStorage. A future version can add cloud sync.
 
-## Official study references
-- NJDOH Asbestos Program / Candidate Information Bulletin
-- NJ Department of Labor Asbestos Control and Licensing Act/Regulations
-- OSHA 29 CFR 1926.1101
-- EPA asbestos NESHAP / AHERA materials
+This is an independent study aid and is not affiliated with NJDOH. It contains original practice questions, not actual state exam questions.
