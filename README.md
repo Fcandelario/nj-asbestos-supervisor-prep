@@ -1,29 +1,32 @@
-# NJ Asbestos Supervisor Prep — v2
+# NJ Asbestos Supervisor Prep — v3 Cloud Sync
 
-Static study site for the New Jersey Asbestos Supervisor exam.
+## New in v3
+- Supabase email magic-link sign-in
+- Cross-device cloud progress
+- Synced scores, missed questions and topic statistics
+- Exam history stored in Supabase
+- Offline/unsigned-in use still works with browser localStorage
+- Existing weighted 50-question mock exam and Review Mistakes mode
 
-## v2 changes
-- 50-question mock exams generated according to the published NJDOH Supervisor exam topic percentages
-- Answer choices randomized
-- Missed-question tracking
-- "Review Mistakes" study mode
-- Per-topic result breakdown
-- Topic buttons display exam weight and available question count
-- Browser-local progress storage
-
-## Deploy to your existing GitHub repo
-
-Replace the existing files with these files, then:
+## Deploy
+Replace the files in your existing GitHub repository with these, then:
 
 ```bash
 git add .
-git commit -m "Add weighted mock exams and mistake review"
+git commit -m "Add Supabase cross-device progress sync"
 git push
 ```
 
-GitHub Pages will update from the branch/folder configured in your repository settings.
+## Supabase Auth setting
+In Supabase Dashboard > Authentication > URL Configuration, add your GitHub Pages URL as an allowed Redirect URL:
+`https://fcandelario.github.io/nj-asbestos-supervisor-prep/`
 
-## Important
-Progress remains browser/device based because it uses localStorage. A future version can add cloud sync.
+The frontend uses only the Supabase publishable key. Never place a secret/service-role key in this repository.
 
-This is an independent study aid and is not affiliated with NJDOH. It contains original practice questions, not actual state exam questions.
+## First use
+1. Open the GitHub Pages site.
+2. Enter your email and choose "Email me a sign-in link".
+3. Open the link in the email.
+4. Progress is then stored in Supabase and follows the signed-in account across devices.
+
+Independent study aid; not affiliated with NJDOH.

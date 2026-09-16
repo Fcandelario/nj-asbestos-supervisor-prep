@@ -16,6 +16,14 @@
 </header>
 
 <section id="home" class="panel">
+  <div id="signedOut" class="authbar">
+    <input id="emailInput" type="email" autocomplete="email" placeholder="Email address">
+    <button id="loginBtn" class="primary" style="margin-top:0">Email me a sign-in link</button>
+  </div>
+  <div id="signedIn" class="userline hidden">
+    <span><strong id="userEmail"></strong><br><span id="syncStatus" class="sync">Cloud sync ready</span></span>
+    <button id="logoutBtn" class="ghost">Sign out</button>
+  </div>
   <div class="stats">
     <div><strong id="answeredStat">0</strong><span>Answered</span></div>
     <div><strong id="accuracyStat">—</strong><span>Accuracy</span></div>
@@ -56,5 +64,6 @@
   <div class="result-actions"><button id="retryBtn" class="primary">Try again</button><button id="homeBtn" class="ghost">Home</button></div>
 </section>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="questions.js"></script><script src="app.js"></script>
 </body></html>
