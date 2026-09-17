@@ -2,7 +2,7 @@
 
 Independent study aid based on public NJDOH, OSHA, EPA, and New Jersey requirements. Questions are original practice items, not actual state-exam questions.
 
-The bank currently has 119 questions. The site offers the original weighted 50-question mock exam and a 100-question practice exam, plus topic practice and mistake review. An acronym guide appears beside each question, and practice feedback includes a study note and related official guidance.
+The bank currently has 156 questions. The site offers the original weighted 50-question mock exam and a 100-question practice exam, plus topic practice and mistake review. An acronym guide appears beside each question, and practice feedback includes a study note and related official guidance.
 
 ## New in v3
 - Supabase email magic-link sign-in
