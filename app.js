@@ -71,6 +71,7 @@ function weightedExam(n=50){
 }
 function start(mode,topic=null){
  state={mode,topic,i:0,correct:0,answers:[],locked:false,list:[]};
+ $("acronymPanel").classList.toggle("hidden",mode==="exam"||mode==="exam100");
  if(mode==="exam"||mode==="exam100")state.list=weightedExam(mode==="exam100"?100:50);else if(mode==="mistakes"){const ids=new Set(getP().missed||[]);state.list=shuffle(QUESTIONS.filter(q=>ids.has(qid(q))));if(!state.list.length){alert("No missed questions yet.");return}}else state.list=shuffle(topic?QUESTIONS.filter(q=>q.category===topic):QUESTIONS);
  show("quiz");renderQuestion();
 }
