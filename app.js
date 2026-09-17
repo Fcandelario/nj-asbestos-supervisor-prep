@@ -75,14 +75,19 @@ function start(mode,topic=null){
  if(mode==="exam"||mode==="exam100")state.list=weightedExam(mode==="exam100"?100:50);else if(mode==="mistakes"){const ids=new Set(getP().missed||[]);state.list=shuffle(QUESTIONS.filter(q=>ids.has(qid(q))));if(!state.list.length){alert("No missed questions yet.");return}}else state.list=shuffle(topic?QUESTIONS.filter(q=>q.category===topic):QUESTIONS);
  show("quiz");renderQuestion();
 }
+function updateProgressText(){
+ const position=`Question ${state.i+1} of ${state.list.length}`;
+ $("progressText").textContent=state.mode==="exam"||state.mode==="exam100"?position:`${state.correct}/${state.answers.length} correct • ${position}`;
+}
 function renderQuestion(){
  state.locked=false;$("feedback").classList.add("hidden");$("nextBtn").classList.add("hidden");const q=state.list[state.i];
- $("category").textContent=q.category;$("question").textContent=q.q;$("progressText").textContent=`${state.i+1} / ${state.list.length}`;$("progressBar").style.width=(state.i/state.list.length*100)+"%";
+ $("category").textContent=q.category;$("question").textContent=q.q;updateProgressText();$("progressBar").style.width=(state.i/state.list.length*100)+"%";
  const terms=usedAcronyms(q);$("acronymList").replaceChildren(...terms.map(term=>{const item=document.createElement("div");item.className="acronym-item";const title=document.createElement("strong");title.textContent=term+" — "+ACRONYMS[term][0];const note=document.createElement("p");note.textContent=ACRONYMS[term][1];item.append(title,note);return item}));if(!terms.length){const p=document.createElement("p");p.className="side-hint";p.textContent="No acronyms appear in this question."; $("acronymList").append(p)}
  const order=shuffle(q.a.map((answer,idx)=>({answer,idx})));$("answers").replaceChildren(...order.map(x=>{const b=document.createElement("button");b.className="answer";b.dataset.original=x.idx;b.textContent=x.answer;b.onclick=()=>choose(x.idx);return b}));
 }
 function choose(choice){
  if(state.locked)return;state.locked=true;const q=state.list[state.i],ok=choice===q.correct;if(ok)state.correct++;state.answers.push({id:qid(q),category:q.category,ok});
+ updateProgressText();
  if(state.mode!=="exam"&&state.mode!=="exam100"){document.querySelectorAll(".answer").forEach(b=>{b.disabled=true;let i=+b.dataset.original;if(i===q.correct)b.classList.add("correct");if(i===choice&&!ok)b.classList.add("wrong")});const box=$("feedback");box.replaceChildren();const heading=document.createElement("strong");heading.textContent=ok?"Correct":"Incorrect — the correct answer is "+q.a[q.correct];const why=document.createElement("p");why.textContent=q.explanation;const label=document.createElement("h3");label.textContent="Study note";const detail=document.createElement("p");detail.textContent=studyGuide(q);box.append(heading,why,label,detail);const link=document.createElement("a");link.href=questionSource(q);link.target="_blank";link.rel="noopener noreferrer";link.textContent=q.source?"Read the official source":"Read related official guidance";box.append(link);box.classList.remove("hidden");$("nextBtn").textContent=state.i===state.list.length-1?"See results":"Next question";$("nextBtn").classList.remove("hidden")}else next();
 }
 function next(){if(state.i<state.list.length-1){state.i++;renderQuestion()}else finish()}
