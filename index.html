@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#07101d">
   <title>NJ Asbestos Supervisor Prep</title>
-  <link rel="stylesheet" href="style.css?v=20260917">
+  <link rel="stylesheet" href="style.css?v=20260924">
 </head>
 <body>
 <main class="app">
@@ -26,19 +26,27 @@
   </div>
   <div class="stats">
     <div><strong id="answeredStat">0</strong><span>Answered</span></div>
-    <div><strong id="accuracyStat">—</strong><span>Accuracy</span></div>
+    <div><strong id="accuracyStat">—</strong><span>Accuracy incl. repeats</span></div>
     <div><strong id="bestStat">—</strong><span>Best exam</span></div>
     <div><strong id="missedStat">0</strong><span>To review</span></div>
   </div>
 
+  <section id="resumeCard" class="resume-card hidden" aria-label="Saved session"><div><p class="eyebrow">SAVED ON THIS DEVICE</p><strong id="resumeLabel"></strong></div><button id="resumeBtn" class="primary">Resume session</button></section>
+  <section class="learning-panel" aria-label="Learning progress">
+    <div><p class="eyebrow">FIRST-ATTEMPT ACCURACY</p><strong id="firstAttempt" class="learning-score">—</strong><p id="firstCount" class="note"></p></div>
+    <div><h3>Recent exams</h3><ul id="recentExams"></ul></div>
+  </section>
+  <p class="note">First attempts, recent scores, and saved sessions are tracked on this device for each account. Overall totals and missed questions continue to sync when signed in. Repeated-question scores are not a prediction of exam readiness.</p>
+  <h3>Topics to strengthen</h3><div id="weakTopics" class="topics"></div>
   <h2>Study</h2>
   <div class="mode-grid">
     <button class="mode-card" data-mode="practice"><strong>Practice</strong><span>All topics, instant explanations</span></button>
     <button class="mode-card" data-mode="exam"><strong>50-Q Mock Exam</strong><span>Weighted to the NJDOH blueprint</span></button>
     <button class="mode-card" data-mode="exam100"><strong>100-Q Practice Exam</strong><span>Longer practice using the NJDOH topic weights</span></button>
-    <button id="mistakesBtn" class="mode-card"><strong>Review Mistakes</strong><span>Drill questions you have missed</span></button>
+    <button id="mistakesBtn" class="mode-card"><strong>Review Mistakes</strong><span>Revisit missed questions with spaced follow-up</span></button>
   </div>
 
+  <p class="note">Missed questions stay in review until answered correctly in two completed sessions at least 24 hours apart. Earlier retries are welcome but do not earn extra spacing credit.</p>
   <h2>Practice by topic</h2>
   <div id="topics" class="topics"></div>
 
@@ -46,18 +54,21 @@
     <summary>NJ Supervisor exam blueprint</summary>
     <div id="weights"></div>
   </details>
-  <p class="note">Independent study tool. Not affiliated with NJDOH and does not contain actual state exam questions.</p>
+  <p class="note">The 50- and 100-question lengths are practice formats, not a statement of the state exam’s length. <a href="https://www.pearsonvue.com/content/dam/VUE/vue/en/documents/publications/393100.pdf" target="_blank" rel="noopener noreferrer">Official exam outline</a>.</p><p class="note">Independent study tool. Not affiliated with NJDOH and does not contain actual state exam questions.</p>
 </section>
 
 <section id="quiz" class="panel hidden">
-  <div class="quiz-top"><button id="backBtn" class="ghost">← Home</button><div id="progressText"></div></div>
+  <div class="quiz-top"><button id="backBtn" class="ghost">Save & home</button><div id="progressText"></div></div>
   <div class="progress"><div id="progressBar"></div></div>
   <div class="study-layout">
     <div class="question-main">
-      <p id="category" class="eyebrow"></p><h2 id="question"></h2>
+      <p id="category" class="eyebrow"></p><h2 id="question" tabindex="-1"></h2>
       <div id="answers" class="answers"></div>
-      <div id="feedback" class="feedback hidden"></div>
-      <button id="nextBtn" class="primary hidden">Next question</button>
+      <div id="feedback" class="hidden" aria-live="polite"></div>
+      <div class="quiz-actions"><button id="prevBtn" class="ghost">Previous</button><button id="flagBtn" class="ghost" aria-pressed="false">Flag for review</button><button id="nextBtn" class="primary">Next</button></div>
+      <details class="question-navigator"><summary>Question navigator</summary><p class="note">Filled = answered · ⚑ = flagged. Select a number to return to it.</p><div id="questionMap" class="question-map"></div></details>
+      <button id="finishBtn" class="primary">Review & submit</button>
+      <section id="submitPanel" class="submit-panel hidden" aria-label="Submit session"><h3>Ready to finish?</h3><p id="submitSummary"></p><div class="quiz-actions"><button id="cancelSubmitBtn" class="ghost">Keep reviewing</button><button id="submitBtn" class="primary">Submit answers</button></div></section>
     </div>
     <aside id="acronymPanel" class="acronym-panel" aria-label="Acronyms in this question">
       <h3>Acronym guide</h3>
@@ -71,9 +82,11 @@
   <p class="eyebrow">RESULTS</p><h2 id="resultTitle"></h2>
   <div id="scoreCircle" class="score-circle"></div><p id="resultMessage"></p>
   <h3>Topic breakdown</h3><div id="breakdown"></div>
+  <h3>Review your answers</h3><label for="reviewFilter">Show </label><select id="reviewFilter"><option value="all">All questions</option><option value="missed">Incorrect & unanswered</option><option value="flagged">Flagged questions</option></select><div id="answerReview"></div>
   <div class="result-actions"><button id="retryBtn" class="primary">Try again</button><button id="homeBtn" class="ghost">Home</button></div>
 </section>
+<p id="saveStatus" role="status" class="note"></p>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="questions.js"></script><script src="questions-extra.js"></script><script src="study-guide.js"></script><script src="app.js?v=20260917b"></script>
+<script src="questions.js?v=20260924"></script><script src="study-guide.js?v=20260924"></script><script src="study-engine.js?v=20260924"></script><script src="app.js?v=20260924"></script>
 </body></html>
