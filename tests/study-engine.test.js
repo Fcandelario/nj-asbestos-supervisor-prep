@@ -8,7 +8,7 @@ const empty=()=>({answered:0,correct:0,best:0,missed:[],topic_stats:{}});
 function attempt(q,correct,mode='practice'){const s=E.session(mode,[q]);s.choices[0]=correct?q.correct:(q.correct+1)%4;return s}
 test('every question has unique stable identity, four distinct choices and a public source',()=>{
  assert.equal(new Set(bank.map(E.id)).size,bank.length);
- for(const q of bank){assert.equal(q.a.length,4,q.id);assert.equal(new Set(q.a).size,4,q.id);assert.ok(q.correct>=0&&q.correct<4,q.id);assert.ok(q.explanation.length>30,q.id);assert.match(q.source,/^https:\/\/(www\.)?(osha\.gov|ecfr\.gov|nj\.gov|epa\.gov)\//,q.id);assert.ok(q.sourceLabel,q.id);assert.ok(q.rationale?.length>30,q.id)}
+ for(const q of bank){assert.equal(q.a.length,4,q.id);assert.equal(new Set(q.a).size,4,q.id);assert.ok(q.correct>=0&&q.correct<4,q.id);assert.ok(q.explanation.length>30,q.id);assert.match(q.source,/^https:\/\/(www\.)?(osha\.gov|ecfr\.gov|nj\.gov|epa\.gov|atsdr\.cdc\.gov)\//,q.id);assert.ok(q.sourceLabel,q.id);assert.ok(q.rationale?.length>30,q.id)}
  assert.ok(bank.filter(q=>q.kind==='Scenario').length>=40);
 });
 test('both exam lengths meet the blueprint without repeated questions',()=>{

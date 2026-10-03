@@ -5,10 +5,10 @@ const QUESTIONS = [
     "category": "General Topics Related to Asbestos",
     "q": "Which statement best describes asbestos?",
     "a": [
-      "A synthetic plastic fiber",
+      "A group of manufactured mineral fibers used in insulation",
       "A naturally occurring group of fibrous minerals",
-      "A type of fiberglass insulation",
-      "A chemical added to concrete"
+      "A naturally occurring group of nonfibrous silicate minerals",
+      "A group of fibrous minerals defined by their ability to dissolve in water"
     ],
     "correct": 1,
     "explanation": "Asbestos is a naturally occurring group of fibrous silicate minerals.",
@@ -17,16 +17,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(b)",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "Fiberglass and synthetic plastic fibers are not the naturally occurring asbestos mineral group."
+    "rationale": "Asbestos is naturally occurring and fibrous. Manufactured fibers, nonfibrous minerals, and a definition based on water solubility do not describe this mineral group."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "Friable asbestos-containing material is material that, when dry:",
     "a": [
-      "Cannot release fibers",
+      "Releases fibers whenever it is painted",
       "Can be crumbled, pulverized, or reduced to powder by hand pressure",
-      "Contains less than 1% asbestos",
-      "Has been painted"
+      "Can be reduced to powder only with power tools",
+      "Contains any detectable amount of asbestos"
     ],
     "correct": 1,
     "explanation": "Friability is based on whether dry material can be crumbled, pulverized, or reduced to powder by hand pressure.",
@@ -35,25 +35,25 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-61/subpart-M/section-61.141",
     "sourceLabel": "EPA §61.141 — friable material",
-    "rationale": "Friability is a dry hand-pressure property. Percentage, paint, and claims of zero fiber release do not define it."
+    "rationale": "Friability is determined by dry hand pressure. Painting, detectable asbestos content, or needing power tools does not meet that definition."
   },
   {
     "category": "General Topics Related to Asbestos",
-    "q": "Which is one of the major commercial asbestos fiber types?",
+    "q": "Which asbestos mineral is in the serpentine group?",
     "a": [
       "Chrysotile",
-      "Silicone",
-      "Graphite",
-      "Cellulose"
+      "Tremolite",
+      "Actinolite",
+      "Anthophyllite"
     ],
     "correct": 0,
-    "explanation": "Chrysotile is a major commercial asbestos type.",
+    "explanation": "Chrysotile is the serpentine asbestos mineral; the other listed types are amphiboles.",
     "id": "nj-003",
     "legacyId": "General Topics Related to Asbestos|Which is one of the major commercial asbestos fiber types?",
     "kind": "Recall",
-    "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(b)",
-    "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "Silicone, graphite, and cellulose are not commercial asbestos mineral types."
+    "source": "https://www.atsdr.cdc.gov/asbestos/about/index.html",
+    "sourceLabel": "CDC/ATSDR — asbestos mineral classes",
+    "rationale": "Tremolite, actinolite, and anthophyllite belong to the amphibole group; chrysotile belongs to the serpentine group."
   },
   {
     "category": "General Topics Related to Asbestos",
@@ -78,9 +78,9 @@ const QUESTIONS = [
     "q": "Asbestosis primarily involves:",
     "a": [
       "Scarring (fibrosis) of lung tissue",
-      "Inflammation of the bronchial airways",
-      "Cancer of the pleural lining",
-      "Fluid accumulation around the lungs"
+      "A malignant tumor of the pleura",
+      "Scarring of the skin after fiber contact",
+      "A cancer of the lung tissue"
     ],
     "correct": 0,
     "explanation": "Asbestosis is a chronic fibrotic disease of the lungs caused by asbestos exposure.",
@@ -89,16 +89,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101AppH",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "Pleural cancer, airway inflammation, and pleural fluid are different conditions from lung-tissue fibrosis."
+    "rationale": "Asbestosis is fibrosis of lung tissue. Lung cancer and pleural cancer are malignant diseases, and skin scarring is not asbestosis."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Mesothelioma is most strongly associated with cancer of the:",
     "a": [
       "Membranes lining the chest or abdominal cavities",
-      "Air sacs within the lung tissue",
-      "Lining of the large airways",
-      "Lymph nodes in the chest"
+      "Air passages inside the lungs",
+      "Lymph nodes of the chest",
+      "Bones of the rib cage"
     ],
     "correct": 0,
     "explanation": "Mesothelioma affects mesothelial linings, commonly the pleura and peritoneum.",
@@ -107,16 +107,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101AppH",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "The key is the mesothelial lining, rather than the lung air sacs, airways, or lymph nodes."
+    "rationale": "Mesothelioma affects the mesothelial linings. Airways, lymph nodes, and rib bones are not the lining identified by this diagnosis."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Smoking combined with occupational asbestos exposure:",
     "a": [
-      "Raises mesothelioma risk by the same mechanism as lung cancer",
+      "Increases mesothelioma risk but has no effect on lung-cancer risk",
       "Can greatly increase lung-cancer risk",
-      "Affects lung-cancer risk independently, without a combined effect",
-      "Makes smoking the only relevant lung-cancer risk"
+      "Reduces the number of asbestos fibers inhaled",
+      "Makes asbestos exposure safe below the PEL"
     ],
     "correct": 1,
     "explanation": "Smoking and asbestos exposure have a strong combined effect on lung-cancer risk.",
@@ -125,16 +125,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101AppH",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "Do not transfer the smoking interaction for lung cancer to mesothelioma, or dismiss the asbestos contribution."
+    "rationale": "The combined lung-cancer risk does not mean smoking reduces inhalation or makes exposure safe. Do not substitute a claim about mesothelioma for the lung-cancer interaction."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Asbestos-related diseases commonly have:",
     "a": [
       "A long latency period",
-      "Symptoms that reliably appear during the exposure shift",
-      "Symptoms that must appear before medical surveillance applies",
-      "A short enough latency to judge exposure by how the worker feels"
+      "Symptoms that reliably appear during the same work shift",
+      "A latency period of exactly one year",
+      "No latency after high-level exposure"
     ],
     "correct": 0,
     "explanation": "Many asbestos diseases develop years or decades after exposure.",
@@ -143,16 +143,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101AppH",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "Immediate symptoms are not required for disease to develop later or for preventive requirements to apply."
+    "rationale": "Symptoms need not develop during the shift or within exactly one year. High exposure does not make immediate symptoms a reliable indicator."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Under OSHA’s construction asbestos rule, which exposure condition can trigger medical surveillance when it occurs on a combined total of 30 or more days per year?",
     "a": [
       "The PEL or excursion limit",
-      "A bulk-material asbestos percentage alone",
-      "The respirator fit factor alone",
-      "The enclosure pressure differential alone"
+      "Only the 30-minute excursion limit",
+      "Only the 8-hour PEL, never the excursion limit",
+      "Only the final clearance level"
     ],
     "correct": 0,
     "explanation": "Exposure at or above an applicable permissible exposure limit is a medical-surveillance trigger at 30 or more days per year. The Class I/II/III work-duration trigger is a separate basis for coverage.",
@@ -161,7 +161,7 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(m)",
     "sourceLabel": "OSHA §1926.1101(m) — medical surveillance",
-    "rationale": "Bulk asbestos percentage describes the material. A fit factor describes respirator fit, and enclosure pressure describes a control. None measures the employee’s airborne exposure against a limit."
+    "rationale": "The surveillance exposure trigger is not restricted to just one of the two exposure limits. A final clearance result is not the employee exposure criterion in this question."
   },
   {
     "category": "Personal Protective and Other Equipment",
@@ -185,10 +185,10 @@ const QUESTIONS = [
     "category": "Personal Protective and Other Equipment",
     "q": "A respirator should be selected primarily according to:",
     "a": [
-      "The asbestos percentage in a bulk sample alone",
+      "The asbestos percentage in the bulk material alone",
       "Expected airborne exposure and the protection required",
-      "The assigned work class without considering exposure",
-      "The protection used on the contractor's previous project"
+      "The most recent clearance sample from another project",
+      "Whether the facepiece is disposable or reusable"
     ],
     "correct": 1,
     "explanation": "Respirator selection must provide adequate protection for the anticipated exposure and task.",
@@ -197,16 +197,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(h)(3)",
     "sourceLabel": "OSHA §1926.1101(h)(3) — respirator selection",
-    "rationale": "Material percentage, work class, and prior equipment use cannot alone establish the required protection against expected exposure."
+    "rationale": "Bulk asbestos percentage, another project's clearance result, and whether a facepiece is reusable do not alone establish adequate protection for expected exposure."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "A tight-fitting respirator generally requires:",
     "a": [
       "A fit test",
-      "A user seal check instead of a fit test",
-      "A fit test only when leakage is reported",
-      "A fit test with any facepiece of the same nominal size"
+      "A user seal check in place of formal fit testing",
+      "Fit testing only after the first year of use",
+      "A fit test only if an air sample exceeds the PEL"
     ],
     "correct": 0,
     "explanation": "Tight-fitting respirators require fit testing and a proper face-to-facepiece seal.",
@@ -215,16 +215,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134#1910.134(f)",
     "sourceLabel": "OSHA §1910.134(f) — fit testing",
-    "rationale": "A seal check is required at donning but is not a fit test. Fit testing must use the facepiece actually assigned."
+    "rationale": "A seal check is not a formal fit test. Waiting for a year or for an above-limit sample misses the initial fit-testing requirement."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "Facial hair that crosses the sealing surface of a tight-fitting respirator:",
     "a": [
-      "Is acceptable if the annual fit test was passed before the hair grew",
-      "Is acceptable after tightening the straps",
+      "Is allowed after a successful annual fit test",
+      "Is allowed when a powered respirator has a tight-fitting facepiece",
       "Can interfere with the seal and is not permitted",
-      "Is acceptable whenever measured exposure is below the PEL"
+      "Can be offset by tightening the straps"
     ],
     "correct": 2,
     "explanation": "Nothing may interfere with the seal of a tight-fitting respirator.",
@@ -233,16 +233,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134#1910.134(g)",
     "sourceLabel": "OSHA §1910.134(g) — respirator use",
-    "rationale": "Past fit testing, strap adjustment, or a below-PEL result does not permit hair across the sealing surface."
+    "rationale": "A past fit test and tightened straps do not excuse hair across the seal. A powered respirator with a tight-fitting facepiece still requires an effective seal."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "The main purpose of negative-air equipment in a containment is to:",
     "a": [
-      "Provide a substitute for adequately wet removal",
+      "Replace respiratory protection through general dilution",
       "Maintain airflow/pressure control and filter exhausted air",
-      "Maintain positive pressure to push contaminants away from workers",
-      "Establish final clearance without air sampling"
+      "Maintain positive pressure to keep outdoor air out",
+      "Exhaust unfiltered air to reduce worker heat stress"
     ],
     "correct": 1,
     "explanation": "Negative-air systems help maintain pressure differential and exhaust air through HEPA filtration.",
@@ -251,16 +251,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Negative air controls airflow and filtration. It does not replace wet methods or establish final clearance, and positive pressure can push contaminated air outward."
+    "rationale": "Negative-air equipment filters exhausted air and controls airflow. It does not replace required respirators, create a positive-pressure containment, or permit unfiltered exhaust."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "A basic method for reducing airborne fiber release while disturbing ACM is:",
     "a": [
-      "Dry sweeping",
+      "Dry removal followed by wet cleanup",
       "Wet methods",
-      "Compressed air",
-      "High-speed sanding"
+      "General ventilation without local controls",
+      "Wet cleaning only after the material has been removed"
     ],
     "correct": 1,
     "explanation": "Wet methods are a fundamental engineering/work-practice control for minimizing fiber release.",
@@ -269,16 +269,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)(1)",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "Dry sweeping, compressed air without capture, and high-speed sanding can increase airborne release rather than suppress it."
+    "rationale": "Control fibers during disturbance. Wetting only afterward or relying solely on general ventilation does not provide that source control."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Asbestos debris should generally be cleaned using:",
     "a": [
-      "A standard shop vacuum with a disposable paper bag",
-      "Dry sweeping followed by a wet wipe",
+      "Dry sweeping followed by HEPA vacuuming",
+      "A standard vacuum followed by wet wiping",
       "HEPA vacuuming and wet cleaning",
-      "Compressed air followed by local vacuuming"
+      "Wet wiping followed by compressed-air cleaning"
     ],
     "correct": 2,
     "explanation": "HEPA vacuuming and wet cleaning are standard asbestos cleanup methods; dry sweeping and compressed air are generally prohibited.",
@@ -287,16 +287,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)(1)",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "An ordinary paper-bag vacuum is not a HEPA vacuum. Following dry sweeping or uncontrolled blowing with cleanup does not undo the initial release."
+    "rationale": "Ordinary vacuums, dry sweeping, and uncontrolled compressed air can spread contamination. Following an unsuitable method with another cleaning step does not undo the release."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Before asbestos abatement begins, the supervisor should ensure the regulated/work area is:",
     "a": [
-      "Posted only after the first exposure result exceeds the PEL",
+      "Posted but left open while waste is loaded",
       "Properly established, controlled, and posted",
-      "Open to trained occupants without checking authorization",
-      "Marked by barriers without entrance warning signs"
+      "Separated from adjacent areas only after removal begins",
+      "Established only if personal samples exceed the PEL"
     ],
     "correct": 1,
     "explanation": "Access control, warning signs and proper work-area preparation are core asbestos controls.",
@@ -305,16 +305,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(e)",
     "sourceLabel": "OSHA §1926.1101(e) — regulated areas",
-    "rationale": "Set up access control and signs before work; do not wait for an above-limit result or substitute training alone for authorization."
+    "rationale": "Control access and establish the area before disturbance. Posting alone, delayed separation, or waiting for an above-limit result is insufficient."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Asbestos waste leaving the regulated area should be:",
     "a": [
       "Handled to prevent release of fibers and properly contained/labeled",
-      "Double-bagged without labeling if the bags are transparent",
-      "Labeled only when the waste reaches the disposal site",
-      "Dried before packaging to reduce bag weight"
+      "Bagged only after it reaches the waste vehicle",
+      "Allowed to dry before sealing so the bags weigh less",
+      "Contained but left unlabeled if the landfill has been notified"
     ],
     "correct": 0,
     "explanation": "ACM waste must be handled, packaged, labeled and transported in a manner that prevents fiber release and meets applicable requirements.",
@@ -323,16 +323,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(l)",
     "sourceLabel": "OSHA §1926.1101(l) — housekeeping",
-    "rationale": "A transparent bag does not replace labeling. Labeling only at disposal and deliberately drying waste do not provide the required handling controls."
+    "rationale": "Contain waste before transport through clean areas and apply required labels. Drying waste or notifying a landfill does not waive packaging or labeling."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Why are critical barriers installed during many containment setups?",
     "a": [
-      "Create a substitute for decontamination facilities",
+      "To replace the need for negative pressure on every Class I project",
       "To isolate openings and help prevent fiber migration",
-      "Provide a substitute for negative-air filtration",
-      "Allow unfiltered exhaust through building openings"
+      "To filter air passing through open doorways",
+      "To prevent employees from using the decontamination unit"
     ],
     "correct": 1,
     "explanation": "Critical barriers seal openings and help isolate the asbestos work area.",
@@ -341,16 +341,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Sealing pathways complements filtration and decontamination. It does not replace either or authorize unfiltered exhaust."
+    "rationale": "A critical barrier seals an opening; it does not filter air through an open doorway, replace every required pressure control, or block the required decontamination route."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Which practice is generally prohibited for asbestos cleanup?",
     "a": [
-      "HEPA vacuuming",
       "Wet wiping",
+      "HEPA vacuuming",
       "Dry sweeping",
-      "Careful waste bagging"
+      "Sealed waste handling"
     ],
     "correct": 2,
     "explanation": "Dry sweeping can re-aerosolize asbestos fibers and is prohibited.",
@@ -359,16 +359,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)(1)",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "Wet wiping, HEPA vacuuming, and careful bagging suppress or contain contamination; dry sweeping can re-suspend it."
+    "rationale": "Wet wiping, HEPA vacuuming, and sealed waste handling control contamination. Dry sweeping can re-suspend fibers."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "When a glove bag is used for appropriate asbestos work, it should be:",
     "a": [
-      "Reused if the previous job produced no visible dust",
+      "Used for any amount of ACM without assessing the task",
       "Used according to applicable OSHA procedures and kept intact",
-      "Filled before its integrity is checked",
-      "Used as a substitute for required respiratory protection"
+      "Used as a substitute for exposure assessment",
+      "Opened inside containment as soon as removal ends"
     ],
     "correct": 1,
     "explanation": "Glove-bag operations have specific work-practice requirements; integrity and controlled procedures are essential.",
@@ -377,16 +377,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "A glove bag is not an automatic exemption from respirators or other controls. Follow the applicable procedures for inspection, use, and disposal."
+    "rationale": "A glove bag has task-specific limits and procedures. It cannot cover every amount of ACM, replace exposure assessment, or be opened before released fibers and waste are controlled."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "A decontamination system is intended primarily to:",
     "a": [
       "Prevent asbestos contamination from being carried out of the regulated area",
-      "Demonstrate that airborne exposure is below the PEL",
-      "Provide the final waste-disposal location",
-      "Replace the need to contain contaminated clothing"
+      "Replace wet cleaning at the end of a shift",
+      "Separate waste from non-asbestos construction debris",
+      "Measure the pressure differential in containment"
     ],
     "correct": 0,
     "explanation": "Decontamination procedures limit migration of asbestos contamination to clean areas.",
@@ -395,16 +395,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(j)",
     "sourceLabel": "OSHA §1926.1101(j) — hygiene facilities and practices",
-    "rationale": "Decontamination interrupts transfer from dirty to clean areas. It is neither an exposure assessment nor a waste-storage substitute."
+    "rationale": "Decontamination limits carryout on people and equipment. It does not replace cleanup, sort construction debris, or measure enclosure pressure."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "The preferred condition for ACM during removal is generally:",
     "a": [
       "Adequately wet, unless a specific exception applies",
-      "Wetted only after the material reaches the floor",
-      "Dry if workers wear full-face respirators",
-      "Wetted only if visible dust develops"
+      "Dry unless visible dust appears",
+      "Wetted only after it has been bagged",
+      "Wet on the surface but deliberately kept dry inside"
     ],
     "correct": 0,
     "explanation": "Adequately wet methods are a primary fiber-control requirement, subject to specific regulatory exceptions.",
@@ -413,16 +413,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)(1)",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "Waiting until debris is on the floor or dust becomes visible misses control during disturbance. Respirator choice alone does not waive wet methods."
+    "rationale": "Adequate wetting must control release during removal. Visible dust is not the trigger for starting, and wetting only after bagging or only the surface may not adequately wet the material."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "After gross removal, final cleaning should focus on:",
     "a": [
-      "Obtaining clearance samples before removing remaining residue",
+      "Taking clearance samples before removing visible residue",
       "Removing visible residue and contamination using approved cleaning methods",
-      "Removing large pieces while leaving fine residue for air filtration",
-      "Dismantling barriers so outside air can dilute contamination"
+      "Dry wiping because wet methods are only for removal",
+      "Shutting off negative air before cleaning ends"
     ],
     "correct": 1,
     "explanation": "Thorough cleaning is required before the work area can progress toward clearance/reoccupancy procedures.",
@@ -431,16 +431,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(l)",
     "sourceLabel": "OSHA §1926.1101(l) — housekeeping",
-    "rationale": "Remaining visible residue must be addressed with approved cleaning. Air sampling, dilution, or filtration alone does not remove that residue."
+    "rationale": "Remove residue with approved methods before clearance. Early sampling, dry wiping, or shutting off needed controls does not complete final cleaning."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Which is the best reason to maintain containment integrity throughout abatement?",
     "a": [
       "To prevent fiber migration outside the controlled area",
-      "Allow work to proceed without personal exposure monitoring",
-      "Make worker decontamination unnecessary",
-      "Establish a negative exposure assessment by inspection alone"
+      "To replace personal exposure monitoring",
+      "To avoid the need for worker decontamination",
+      "To permit dry removal inside the sealed area"
     ],
     "correct": 0,
     "explanation": "Containment integrity is essential for preventing contamination of adjacent areas.",
@@ -449,7 +449,7 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(g)",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Intact containment helps control migration; it does not itself establish a negative exposure assessment or replace monitoring and decontamination."
+    "rationale": "Containment limits migration. It does not replace personal monitoring, worker decontamination, or required wet methods."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
@@ -474,9 +474,9 @@ const QUESTIONS = [
     "q": "Besides asbestos exposure, a supervisor should evaluate hazards such as:",
     "a": [
       "Electrical hazards, falls, heat stress and confined spaces",
-      "Fiber exposure and respirator fit, leaving electrical hazards to the owner",
-      "Only hazards documented on the previous project",
-      "Only hazards reported after workers enter containment"
+      "Only hazards listed on the asbestos survey",
+      "Electrical and fall hazards only after removal starts",
+      "Heat stress only when outdoor temperature exceeds 90°F"
     ],
     "correct": 0,
     "explanation": "Asbestos projects can involve numerous conventional construction and occupational hazards.",
@@ -485,16 +485,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(k)(9)(viii)",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "Asbestos precautions do not address every construction hazard. Evaluate the actual site before entry rather than relying only on reports or a previous project."
+    "rationale": "Evaluate actual site hazards before work. An asbestos survey is not a complete construction hazard assessment, and heat risk is not limited to a single outdoor temperature threshold."
   },
   {
     "category": "Additional Safety Hazards",
     "q": "Water used for wet methods can create an increased risk of:",
     "a": [
       "Electrical shock around energized equipment",
-      "Oxygen enrichment in the enclosure",
-      "Carbon monoxide generation from the water",
-      "An increase in airborne asbestos caused by all wet methods"
+      "Falling pressure in respirator cartridges",
+      "Failure of asbestos bulk sample analysis",
+      "Electrical shock only after final clearance"
     ],
     "correct": 0,
     "explanation": "Wet methods can create electrical hazards; electrical safety must be incorporated into planning.",
@@ -503,16 +503,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(k)(9)(viii)",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "Water and energized equipment can create a shock path. The alternatives do not describe the direct conventional hazard introduced here."
+    "rationale": "Water near energized equipment can create a shock path during work. Filter pressure and bulk-sample analysis do not describe that electrical hazard, and it is not limited to final clearance."
   },
   {
     "category": "Additional Safety Hazards",
     "q": "Wearing protective clothing and respirators can contribute to:",
     "a": [
       "Heat stress",
-      "Reduced need for scheduled rest breaks",
-      "Lower physical workload at the same work rate",
-      "Reliable prevention of dehydration"
+      "A lower need for rest breaks regardless of temperature",
+      "Elimination of dehydration risk",
+      "A reduction in physical workload"
     ],
     "correct": 0,
     "explanation": "PPE can increase heat load and physical stress.",
@@ -521,16 +521,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(k)(9)(viii)",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "Protective equipment can add workload and impede heat loss; it does not automatically reduce fatigue, dehydration, or rest requirements."
+    "rationale": "PPE can impede heat loss and add physical burden. It does not eliminate dehydration or automatically reduce workload and rest needs."
   },
   {
     "category": "Testing Methodologies",
     "q": "Personal air samples used to assess worker exposure are collected in the worker's:",
     "a": [
       "Breathing zone",
-      "Nearest fixed area-sampling station",
-      "Clean side of the decontamination unit",
-      "Exhaust outlet of the negative-air machine"
+      "Work area at a fixed wall location",
+      "Equipment room after the shift",
+      "Waste load-out area during bagging"
     ],
     "correct": 0,
     "explanation": "Exposure monitoring uses breathing-zone samples representative of employee exposure.",
@@ -539,16 +539,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(f)",
     "sourceLabel": "OSHA §1926.1101(f) — exposure assessment and monitoring",
-    "rationale": "A stationary area sample or exhaust sample does not measure the employee’s breathing-zone exposure."
+    "rationale": "Personal sampling must represent the employee's breathing zone. Fixed area locations or samples taken elsewhere after the shift are not automatically representative."
   },
   {
     "category": "Testing Methodologies",
     "q": "The OSHA asbestos PEL is expressed as an 8-hour:",
     "a": [
       "Time-weighted average",
-      "Arithmetic average of any available readings, regardless of duration",
-      "Maximum instantaneous fiber concentration",
-      "Average bulk-material asbestos percentage"
+      "Ceiling concentration that may never be exceeded",
+      "Average of final clearance samples",
+      "Short-term excursion measurement"
     ],
     "correct": 0,
     "explanation": "The PEL is an 8-hour time-weighted average airborne concentration.",
@@ -557,7 +557,7 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(c)",
     "sourceLabel": "OSHA §1926.1101(c) — exposure limits",
-    "rationale": "A TWA accounts for concentration and time; it is not an unweighted mean, instantaneous peak, or bulk percentage."
+    "rationale": "An eight-hour TWA accounts for concentration and time. It is not an instantaneous ceiling, a clearance average, or the separate short-term excursion measurement."
   },
   {
     "category": "Testing Methodologies",
@@ -636,9 +636,9 @@ const QUESTIONS = [
     "q": "EPA NESHAP asbestos requirements are primarily associated with:",
     "a": [
       "Air-pollution controls for demolition/renovation involving regulated asbestos",
-      "Worker breathing-zone exposure limits",
-      "Individual worker medical evaluations",
-      "Accreditation of respirator fit-test providers"
+      "Employee respirator medical evaluations",
+      "School management plans under AHERA",
+      "State worker permit applications"
     ],
     "correct": 0,
     "explanation": "The asbestos NESHAP is an EPA air-pollution regulation governing specified demolition/renovation activities and asbestos emissions.",
@@ -647,16 +647,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-61/subpart-M/section-61.145",
     "sourceLabel": "EPA §61.145 — demolition and renovation",
-    "rationale": "NESHAP addresses emissions from covered activities. Worker exposure limits and medical evaluations are OSHA topics."
+    "rationale": "NESHAP addresses emissions from covered activities. Respirator medical evaluations, AHERA school management plans, and state permit applications have different regulatory purposes."
   },
   {
     "category": "Regulations",
     "q": "AHERA is particularly associated with asbestos management in:",
     "a": [
       "Schools",
-      "All privately owned single-family homes",
-      "All industrial process equipment",
-      "All commercial vehicles containing friction products"
+      "All private homes before sale",
+      "Only federally owned office buildings",
+      "All commercial renovations covered by NESHAP"
     ],
     "correct": 0,
     "explanation": "AHERA established asbestos requirements for public and nonprofit private elementary and secondary schools.",
@@ -665,7 +665,7 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.epa.gov/asbestos/asbestos-and-school-buildings",
     "sourceLabel": "EPA — AHERA and school buildings",
-    "rationale": "AHERA’s school provisions apply to public and nonprofit private elementary and secondary schools, not every home, vehicle, or industrial process."
+    "rationale": "AHERA's school requirements cover public and nonprofit private elementary and secondary schools. They do not automatically govern every home sale, federal office, or NESHAP renovation."
   },
   {
     "category": "Regulations",
@@ -690,9 +690,9 @@ const QUESTIONS = [
     "q": "A person who receives a New Jersey asbestos supervisor permit may:",
     "a": [
       "Perform worker duties without a separate worker permit",
-      "Work under an expired employer license while their own permit is valid",
-      "Authorize another worker to use the supervisor's permit",
-      "Replace the employer's license with the supervisor permit"
+      "Issue a worker permit to a trainee",
+      "Transfer the supervisor permit to another employee",
+      "Perform worker duties only after obtaining a second worker permit"
     ],
     "correct": 0,
     "explanation": "NJ regulations state that a permitted supervisor may perform worker duties without possessing a separate worker permit.",
@@ -701,7 +701,7 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.nj.gov/labor/safetyandhealth/resources-support/laws-regulations/asbestosact.shtml",
     "sourceLabel": "N.J.A.C. 12:120-5.4 — examination and supervisor permits",
-    "rationale": "Authority to perform worker duties does not replace an employer license, authorize shared permits, or waive other requirements."
+    "rationale": "The supervisor permit includes authority to perform worker duties without a second worker permit. It does not authorize issuing permits or transferring a personal permit."
   },
   {
     "category": "Regulations",
@@ -709,7 +709,7 @@ const QUESTIONS = [
     "a": [
       "NJ Department of Labor and Workforce Development",
       "NJ Department of Health",
-      "NJ Department of Environmental Protection",
+      "US Environmental Protection Agency",
       "NJ Department of Community Affairs"
     ],
     "correct": 0,
@@ -719,16 +719,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.nj.gov/labor/safetyandhealth/resources-support/laws-regulations/asbestosact.shtml",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "NJDOH oversees training and examination; NJ LWD issues these individual permits. DEP and DCA have different responsibilities."
+    "rationale": "NJ LWD issues these individual permits. NJDOH oversees training and the examination, while EPA and NJ DCA have different responsibilities."
   },
   {
     "category": "Legal Considerations",
     "q": "A supervisor's project records are important because they can:",
     "a": [
       "Document compliance, decisions, monitoring and work practices",
-      "Substitute for required exposure measurements",
-      "Establish compliance without documenting actual site conditions",
-      "Replace required notifications to agencies"
+      "Substitute for employee exposure monitoring",
+      "Prove that all ACM was removed without inspection",
+      "Replace the required employer license"
     ],
     "correct": 0,
     "explanation": "Accurate documentation is a key component of regulatory compliance and project accountability.",
@@ -737,16 +737,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(n)",
     "sourceLabel": "OSHA §1926.1101(n) — records",
-    "rationale": "Records document what happened. They cannot substitute for measurements, notices, or controls that were never performed."
+    "rationale": "Records document compliance decisions and work. They cannot replace monitoring, establish complete removal without inspection, or replace an employer license."
   },
   {
     "category": "Legal Considerations",
     "q": "Knowingly falsifying asbestos records can:",
     "a": [
       "Create serious regulatory and legal consequences",
-      "Be acceptable when the final clearance result is satisfactory",
-      "Be resolved solely by replacing the original with an unsigned copy",
-      "Be permitted when the owner requests the change"
+      "Be corrected by changing the date without an audit trail",
+      "Be acceptable if no worker was over the PEL",
+      "Be treated as a minor clerical error in every case"
     ],
     "correct": 0,
     "explanation": "Required records must be accurate; falsification can result in enforcement and other legal consequences.",
@@ -755,16 +755,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.nj.gov/labor/safetyandhealth/resources-support/laws-regulations/asbestosact.shtml",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "A satisfactory clearance result, an unsigned replacement, or an owner request does not make falsified history accurate."
+    "rationale": "A low exposure result does not excuse falsification. Silently changing a date does not provide an accurate correction trail, and falsification is not automatically a minor clerical error."
   },
   {
     "category": "Legal Considerations",
     "q": "The best response when project conditions differ materially from the approved work plan is to:",
     "a": [
-      "Continue under the original plan until the next scheduled inspection",
+      "Proceed under the original exposure assessment without review",
       "Stop/evaluate as appropriate and address the change under applicable requirements",
-      "Let each worker choose a method before reassessing exposures",
-      "Record the change only after completing the affected work"
+      "Use the planned controls even if the task has changed",
+      "Document the change only after final clearance"
     ],
     "correct": 1,
     "explanation": "Supervisors should ensure changed conditions are evaluated and handled under applicable plans, specifications and regulatory requirements.",
@@ -773,16 +773,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(o)",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "Reassess changed conditions before proceeding as appropriate. Waiting until completion or delegating improvised methods leaves the change unevaluated."
+    "rationale": "Evaluate changed conditions and applicable requirements before proceeding as appropriate. The original assessment or planned controls may no longer fit; documentation only after clearance is too late to guide the work."
   },
   {
     "category": "Legal Considerations",
     "q": "An asbestos supervisor should treat required records as:",
     "a": [
       "Part of the project's compliance documentation",
-      "Records whose retention ends automatically at final clearance",
-      "Documents controlled solely by the building owner",
-      "Informal notes that need not reflect actual work conditions"
+      "Documents kept only when air samples exceed the PEL",
+      "Documents retained only until final clearance",
+      "Documents that can be reconstructed from memory later"
     ],
     "correct": 0,
     "explanation": "Required records form part of the compliance record and should be maintained as required.",
@@ -791,16 +791,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(n)",
     "sourceLabel": "OSHA §1926.1101(n) — records",
-    "rationale": "Required records have applicable retention and access requirements; they are not informal notes that automatically expire at clearance."
+    "rationale": "Required records are compliance documents with applicable retention requirements. They are not needed only after exceedances, do not automatically expire at clearance, and should not depend on later recollection."
   },
   {
     "category": "Supervisory",
     "q": "A supervisor/competent person's role includes:",
     "a": [
       "Identifying hazards and ensuring required controls are implemented",
-      "Accepting the owner's assessment without checking site conditions",
-      "Delegating hazard correction without authority to stop affected work",
-      "Inspecting only when a regulator requests it"
+      "Conducting air analysis in place of an accredited laboratory",
+      "Relying entirely on the prior shift's site inspection",
+      "Issuing state asbestos permits at the worksite"
     ],
     "correct": 0,
     "explanation": "The competent person/supervisor has active responsibilities for hazard recognition, controls, inspections and compliance.",
@@ -809,16 +809,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(o)",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "Hazard recognition must be paired with correction authority. Owner assurances and regulator-requested inspections alone are not active supervision."
+    "rationale": "Competent-person duties center on hazard recognition and effective controls. That role does not itself confer laboratory qualifications or state permit-issuing authority, and a prior shift's inspection does not replace ongoing supervision."
   },
   {
     "category": "Supervisory",
     "q": "If containment is damaged during active abatement, the supervisor's priority is to:",
     "a": [
-      "Increase respirator protection while continuing the affected removal",
+      "Continue until the next scheduled inspection",
       "Control the situation and restore required containment/protection",
-      "Wait for the next scheduled air-monitoring result",
-      "Complete the remaining removal before repairing the barrier"
+      "Increase production to finish the current section",
+      "Take a clearance sample before repairing the breach"
     ],
     "correct": 1,
     "explanation": "Loss of containment can permit fiber migration and requires prompt corrective action.",
@@ -827,16 +827,16 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(o)",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "A respirator upgrade does not repair containment. Continuing removal while waiting for sampling or completion can spread contamination."
+    "rationale": "Address the damaged containment promptly. Waiting for another inspection, increasing production, or sampling before repair leaves the control failure unresolved."
   },
   {
     "category": "Supervisory",
     "q": "Before assigning a worker to asbestos duties, the supervisor should verify:",
     "a": [
       "Required training, protection and project procedures are in place",
-      "A current permit, with no need to check task-specific protection",
-      "Prior construction experience in place of asbestos training",
-      "A fit-test record without checking the assigned facepiece"
+      "That annual refresher training alone replaces all required authorization",
+      "That an experienced worker can start before receiving the required permit",
+      "That the employee owns a respirator, regardless of fit test or program"
     ],
     "correct": 0,
     "explanation": "Supervisors must ensure personnel are properly trained and protected and understand applicable procedures.",
@@ -845,7 +845,7 @@ const QUESTIONS = [
     "kind": "Recall",
     "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1101#1926.1101(o)",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "Credentials, training, and protection are related but distinct. A permit, general experience, or an unrelated fit-test record alone is not sufficient."
+    "rationale": "Verify the complete set of task requirements. Refresher training, experience, and ownership of a respirator do not replace required permits, fit testing, and program protections."
   },
   {
     "category": "General Topics Related to Asbestos",
@@ -853,8 +853,8 @@ const QUESTIONS = [
     "a": [
       "More than 1%",
       "At least 1%, including exactly 1%",
-      "More than 0.1%",
-      "More than 5%"
+      "At least 0.1%",
+      "More than 10%"
     ],
     "correct": 0,
     "explanation": "OSHA defines asbestos-containing material as material containing more than one percent asbestos.",
@@ -863,16 +863,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|Under OSHA's construction asbestos rule, ACM contains asbestos in what amount?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "The definition says more than 1%, not at least 1%. This definition does not mean all work on material below that percentage is unregulated."
+    "rationale": "The definition is more than 1%, excluding exactly 1%. The other numerical thresholds are not this ACM definition; this does not mean every activity involving lower percentages is unregulated."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "Which material is generally presumed asbestos-containing in a building constructed no later than 1980?",
     "a": [
       "Thermal system insulation",
-      "All gypsum wallboard regardless of its history",
-      "All fiberglass insulation",
-      "All painted metal ductwork"
+      "New pipe insulation installed after 1980",
+      "Uncoated metal ductwork from 1975",
+      "New fiberglass insulation installed during a recent renovation"
     ],
     "correct": 0,
     "explanation": "OSHA presumes thermal system insulation in buildings constructed no later than 1980 to be asbestos-containing unless rebutted.",
@@ -881,16 +881,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|Which material is generally presumed asbestos-containing in a building constructed no later than 1980?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "The presumption concerns specified older materials, not every building component from that era."
+    "rationale": "The presumption applies to specified older materials such as TSI. New insulation and uncoated metal ductwork are not the older TSI identified in this question."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "What does TSI mean in the asbestos construction standard?",
     "a": [
       "Thermal system insulation",
-      "Thermal surfacing installation",
-      "Total suspended insulation",
-      "Time-sampled inhalation"
+      "Thermal surface insulation",
+      "Temporary system isolation",
+      "Tightly sealed insulation"
     ],
     "correct": 0,
     "explanation": "TSI means thermal system insulation applied to pipes, fittings, boilers, breeching, tanks, ducts, or other components to prevent heat loss or gain.",
@@ -899,16 +899,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|What does TSI mean in the asbestos construction standard?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "TSI refers to insulation used to control heat transfer, not a sampling or exposure metric."
+    "rationale": "TSI identifies thermal system insulation, not a temporary isolation procedure or a description of how tightly material is sealed."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "Which task is Class I asbestos work under OSHA?",
     "a": [
       "Removing surfacing ACM",
-      "Removing asbestos floor tile",
-      "Repairing insulation while incidentally disturbing ACM",
-      "Cleaning dust without disturbing ACM"
+      "Removing asbestos-containing floor tile",
+      "Removing asbestos-containing roofing shingles",
+      "Disturbing a gasket during repair without removing TSI"
     ],
     "correct": 0,
     "explanation": "Class I covers removal of thermal system insulation or surfacing ACM and PACM.",
@@ -917,16 +917,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|Which task is Class I asbestos work under OSHA?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "Surfacing and TSI removal are Class I. Other ACM removal is generally Class II; maintenance disturbance and custodial contact are separate classes."
+    "rationale": "Surfacing removal is Class I. Floor tile and roofing removal are other ACM removal, while incidental repair disturbance is a different activity."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "Which task is typically Class II asbestos work?",
     "a": [
       "Removing asbestos floor tile",
-      "Removing sprayed-on surfacing ACM",
-      "Removing thermal system insulation",
-      "Maintenance that incidentally disturbs pipe insulation"
+      "Removing pipe insulation containing asbestos",
+      "Repairing an asbestos gasket without removing it",
+      "Removing sprayed fireproofing containing asbestos"
     ],
     "correct": 0,
     "explanation": "Class II removal involves ACM other than thermal system insulation or surfacing material.",
@@ -935,16 +935,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|Which task is typically Class II asbestos work?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "Floor tile is other ACM removal. Removing TSI or surfacing is Class I, while maintenance disturbance is Class III."
+    "rationale": "Floor tile is other ACM removal, generally Class II. Pipe insulation and sprayed fireproofing removal are Class I; repair disturbance is Class III."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "Class III asbestos work is best described as:",
     "a": [
       "Repair and maintenance that disturb ACM or PACM",
-      "Removal of TSI or surfacing ACM",
-      "Removal of ACM other than TSI or surfacing material",
-      "Custodial contact without disturbance of ACM"
+      "Removal of resilient flooring in a whole room",
+      "Removal of sprayed fireproofing",
+      "Custodial cleaning without disturbing ACM"
     ],
     "correct": 0,
     "explanation": "Class III is repair and maintenance work where ACM or PACM is likely to be disturbed.",
@@ -953,16 +953,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|Class III asbestos work is best described as:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "Classify the activity as well as the material: repair/maintenance disturbance differs from removal and nondisturbing custodial contact."
+    "rationale": "Class III is repair and maintenance disturbance. Whole-room flooring removal and sprayed-fireproofing removal are removal activities; nondisturbing custodial contact is a different class."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "An aggressive method of disturbing ACM includes:",
     "a": [
       "Grinding that disintegrates intact material",
-      "Removing floor tile intact with hand tools",
-      "Wetting insulation before controlled removal",
-      "HEPA vacuuming settled dust without disturbing ACM"
+      "Carefully removing intact floor tile by hand",
+      "HEPA vacuuming settled debris",
+      "Wetting a pipe wrap before controlled removal"
     ],
     "correct": 0,
     "explanation": "OSHA defines aggressive methods as sanding, abrading, grinding, or other methods that break, crumble, or disintegrate intact ACM.",
@@ -971,16 +971,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|An aggressive method of disturbing ACM includes:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Grinding that breaks material apart is aggressive. The other choices preserve intact material or clean settled contamination without that disturbance."
+    "rationale": "Grinding that disintegrates material is aggressive. Intact hand removal, HEPA vacuuming, and wetting do not describe that destructive action."
   },
   {
     "category": "General Topics Related to Asbestos",
     "q": "Amended water is water with:",
     "a": [
       "A surfactant to improve penetration",
-      "A disinfectant to neutralize asbestos fibers",
-      "A sealant that encapsulates the entire surface",
-      "A solvent to dissolve asbestos minerals"
+      "A disinfectant intended to neutralize asbestos",
+      "An encapsulant that hardens the ACM",
+      "A chemical that dissolves asbestos fibers"
     ],
     "correct": 0,
     "explanation": "A wetting agent helps water penetrate ACM.",
@@ -989,16 +989,16 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|Amended water is water with:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(b) — definitions",
-    "rationale": "A surfactant improves wetting and penetration. It does not chemically neutralize or dissolve asbestos."
+    "rationale": "A surfactant improves water penetration. Disinfectants do not neutralize asbestos, and amended water is not an encapsulant or a chemical fiber-dissolving treatment."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Which asbestos-related disease is a fibrotic lung disease rather than a cancer?",
     "a": [
       "Asbestosis",
-      "Mesothelioma",
-      "Bronchogenic carcinoma",
-      "Pleural mesothelioma"
+      "Pleural mesothelioma",
+      "Lung carcinoma",
+      "Peritoneal mesothelioma"
     ],
     "correct": 0,
     "explanation": "Asbestosis is lung fibrosis associated with asbestos exposure.",
@@ -1007,16 +1007,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|Which asbestos-related disease is a fibrotic lung disease rather than a cancer?",
     "kind": "Recall",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "The alternatives are cancers; asbestosis is fibrosis of lung tissue."
+    "rationale": "Pleural and peritoneal mesothelioma and lung carcinoma are cancers. Asbestosis is lung fibrosis."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "The primary route of occupational asbestos exposure during abatement is:",
     "a": [
       "Inhalation of airborne fibers",
-      "Absorption through intact skin",
-      "Ingestion as the only occupational route",
-      "Direct contact with hair as the principal route"
+      "Absorption through intact skin during wet removal",
+      "Ingestion of fibers on contaminated hands as the main route",
+      "Exposure to asbestos vapor released by heat"
     ],
     "correct": 0,
     "explanation": "Inhalation of airborne asbestos fibers is the main occupational exposure route.",
@@ -1025,16 +1025,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|The primary route of occupational asbestos exposure during abatement is:",
     "kind": "Recall",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "The key occupational pathway is breathing airborne fibers. Skin contact, hair contamination, or ingestion alone does not describe that primary route."
+    "rationale": "Breathing airborne fibers is the principal occupational route. Skin absorption and ingestion do not replace that route, and asbestos is not an exposure vapor generated by ordinary abatement heat."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Why is a worker's lack of symptoms a poor basis for judging asbestos exposure?",
     "a": [
       "Disease can have a long latency",
-      "Symptoms occur only above the excursion limit",
-      "A normal examination proves that no exposure occurred",
-      "A fit test can determine whether disease has developed"
+      "Air sampling is only valid after symptoms appear",
+      "Asbestos disease always develops within one month",
+      "A normal fit test establishes that no exposure occurred"
     ],
     "correct": 0,
     "explanation": "Asbestos-related diseases may take many years to develop.",
@@ -1043,16 +1043,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|Why is a worker's lack of symptoms a poor basis for judging asbestos exposure?",
     "kind": "Recall",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "Feeling healthy or having a normal examination cannot establish an absence of exposure. A respirator fit test is not a disease test."
+    "rationale": "Disease may develop long after exposure. Air sampling does not depend on symptoms, disease is not guaranteed within one month, and a fit test cannot prove absence of exposure."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Under OSHA’s construction asbestos standard, what combined annual duration of Class I, II, or III work triggers medical surveillance, after applying the day-counting exception?",
     "a": [
       "30 or more counted days per year",
-      "10 counted days per year",
-      "30 consecutive days per year",
-      "60 counted days per year"
+      "10 days per year",
+      "20 days per year",
+      "60 days per year"
     ],
     "correct": 0,
     "explanation": "The trigger is a combined total of 30 or more counted days per year, across the covered work classes. The days do not have to be consecutive. A day of Class II/III work on intact material lasting one hour or less, including cleanup, does not count if the required work practices are fully followed.",
@@ -1061,16 +1061,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|Under OSHA's construction rule, medical surveillance is required for a worker engaged in Class I, II, or III work for at least:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(m) — medical surveillance",
-    "rationale": "Ten days and 60 days are not this threshold. “30 consecutive days” incorrectly adds a consecutive-day condition. Required negative-pressure respirator medical clearance applies before assignment; the 30-day rule is not permission to delay it."
+    "rationale": "Ten, 20, and 60 days are not this threshold. Count qualifying days across the covered classes; they need not be consecutive. Medical clearance for required negative-pressure respirator use is a separate requirement that applies before assignment."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "OSHA medical surveillance for covered asbestos employees must be provided:",
     "a": [
       "At no cost to the employee",
-      "After the employee pays, with reimbursement only for abnormal results",
-      "Only when the employee reports respiratory symptoms",
-      "Only if exposure exceeded the excursion limit"
+      "Only if exposure exceeds the PEL in a single shift",
+      "At the employee's expense after a fit test",
+      "Only after the project reaches final clearance"
     ],
     "correct": 0,
     "explanation": "The employer must provide required medical examinations without cost to the employee.",
@@ -1079,16 +1079,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|OSHA medical surveillance for covered asbestos employees must be provided:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(m) — medical surveillance",
-    "rationale": "Required surveillance is not conditioned on an abnormal result, symptoms, or exceeding only the excursion limit."
+    "rationale": "Covered employees receive required surveillance without cost. It is not deferred until clearance or conditioned solely on a single-shift exceedance, and a fit test does not shift the cost to the employee."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Which statement about asbestos health-effect training is correct?",
     "a": [
       "Health effects of asbestos exposure",
-      "The airborne limit without explaining health effects",
-      "The worker's symptoms as the main measure of exposure",
-      "Respirator selection in place of health-effect information"
+      "Only diseases that appear during a project",
+      "Only the risk of skin contact with asbestos",
+      "Only respiratory effects that are immediately reversible"
     ],
     "correct": 0,
     "explanation": "Training must address asbestos health effects. It also covers the combined effect of smoking and asbestos exposure on lung-cancer risk.",
@@ -1097,16 +1097,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|What health topic should asbestos training address?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(k)(9) — training",
-    "rationale": "Training only on a limit or on equipment leaves out required health information. Symptoms cannot serve as a reliable exposure measure because diseases may have long latency."
+    "rationale": "Training includes health effects with long latency and potentially serious consequences. It is not limited to immediate, reversible disease or skin contact."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "When should a supervisor treat airborne asbestos exposure as a hazard?",
     "a": [
       "Even when fibers cannot be seen",
-      "Only after a worker develops breathing symptoms",
-      "Only when the eight-hour PEL and excursion limit are both exceeded",
-      "Only when dust is visible under ordinary lighting"
+      "Only after visible dust appears",
+      "Only if the bulk material exceeds 10% asbestos",
+      "Only if the worker develops symptoms"
     ],
     "correct": 0,
     "explanation": "Airborne asbestos fibers can be too small to see; visibility does not establish safe exposure.",
@@ -1115,16 +1115,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|When should a supervisor treat airborne asbestos exposure as a hazard?",
     "kind": "Recall",
     "sourceLabel": "OSHA Appendix H — health hazards",
-    "rationale": "Fibers may be airborne without being visible. Symptoms and simultaneous exceedance of both limits are not prerequisites for recognizing a hazard."
+    "rationale": "Airborne fibers may be invisible. A 10% bulk threshold, visible dust, or worker symptoms is not a prerequisite for recognizing the hazard."
   },
   {
     "category": "Health and Medical Considerations",
     "q": "Why does OSHA require a medical determination for a worker assigned to wear a negative-pressure respirator?",
     "a": [
       "To ensure the worker is physically able to perform the work and use the equipment",
-      "To establish the facepiece's fit factor",
-      "To measure the employee's current airborne exposure",
-      "To replace the required respiratory protection program"
+      "To replace the user seal check",
+      "To determine the air sample duration",
+      "To establish the building's ACM percentage"
     ],
     "correct": 0,
     "explanation": "A physician-supervised determination addresses the worker's physical ability to use a negative-pressure respirator safely.",
@@ -1133,16 +1133,16 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|Why does OSHA require a medical determination for a worker assigned to wear a negative-pressure respirator?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(m) — medical surveillance",
-    "rationale": "Medical ability and facepiece fit are different evaluations. Neither a fit factor nor an exposure result substitutes for the medical determination."
+    "rationale": "Medical evaluation addresses ability to use the equipment and do the work. Seal checks, sample duration, and bulk asbestos percentage answer different questions."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "Before an employee wears a required respirator, the employer must provide:",
     "a": [
       "A medical evaluation",
-      "A fit test as a substitute for medical evaluation",
-      "A medical evaluation only after symptoms develop",
-      "A medical evaluation after the first 30 days of respirator use"
+      "A fit test only, regardless of medical status",
+      "A user seal check performed by the supervisor instead of evaluation",
+      "An air sample above the PEL before evaluation"
     ],
     "correct": 0,
     "explanation": "The respiratory protection standard requires medical evaluation before use.",
@@ -1151,16 +1151,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|Before an employee wears a required respirator, the employer must provide:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(e) — medical evaluation",
-    "rationale": "The medical evaluation precedes required respirator use and fit testing. The asbestos 30-day surveillance trigger does not create a respirator grace period."
+    "rationale": "A fit test or seal check does not replace medical evaluation. The employer does not wait for an above-limit air sample before providing evaluation for required respirator use."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "A tight-fitting respirator fit test must be performed:",
     "a": [
       "Before initial use and at least annually",
-      "Before initial use and every two years thereafter",
-      "Only when the respirator brand changes",
-      "Annually, but not before initial use"
+      "Only when the employee changes employers",
+      "Only when the cartridge type changes",
+      "Before initial use and every two years"
     ],
     "correct": 0,
     "explanation": "OSHA requires fit testing before initial use, when the facepiece changes, and at least annually.",
@@ -1169,16 +1169,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|A tight-fitting respirator fit test must be performed:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(f) — fit testing",
-    "rationale": "A two-year interval is too long, annual testing does not excuse initial testing, and changes are not the only trigger."
+    "rationale": "Fit testing occurs before initial use and at least annually, with other triggers such as facepiece changes. Employer changes or cartridge changes alone do not define the schedule, and two years is too long."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "Which condition invalidates a tight-fitting respirator seal?",
     "a": [
       "Facial hair between sealing surface and face",
-      "A seal check completed at each donning",
-      "Fit testing with the same make, model, style, and size",
-      "Adjustment of straps according to the manufacturer"
+      "A current medical evaluation",
+      "A fit-tested facepiece",
+      "A properly adjusted head strap"
     ],
     "correct": 0,
     "explanation": "Facial hair between the sealing surface and face is prohibited.",
@@ -1187,16 +1187,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|Which condition invalidates a tight-fitting respirator seal?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(g) — respirator use",
-    "rationale": "Correct testing and seal-check procedures support protection. Hair crossing the sealing surface directly compromises the sealing interface."
+    "rationale": "Hair crossing the sealing surface can compromise the seal. Medical clearance, a fit-tested facepiece, and properly adjusted straps support protection rather than invalidate it."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "A user seal check is performed:",
     "a": [
       "Each time a tight-fitting respirator is put on",
-      "Only when receiving a new facepiece",
-      "Once at the start of each year",
-      "Only when a fit test is due"
+      "At the start of each work shift regardless of how many times it is donned",
+      "During the annual fit test only",
+      "Only if leakage is noticed after entering containment"
     ],
     "correct": 0,
     "explanation": "Each donning requires a user seal check.",
@@ -1205,16 +1205,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|A user seal check is performed:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(g) — respirator use",
-    "rationale": "The timing is every donning, not annually, only for new equipment, or only when fit testing is due."
+    "rationale": "The requirement is each donning, not once per shift or once per year. Do not wait to discover leakage after entering the work area."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "Can a user seal check replace a fit test?",
     "a": [
       "No, both have different purposes",
-      "Yes, if the worker has worn the same facepiece for a year",
-      "Yes, if exposure is below the PEL",
-      "Yes, when the supervisor observes the seal check"
+      "Yes, when the same model was used previously",
+      "Yes, if the worker has an annual medical evaluation",
+      "Yes, if the project uses wet methods"
     ],
     "correct": 0,
     "explanation": "A seal check is not a substitute for formal fit testing.",
@@ -1223,16 +1223,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|Can a user seal check replace a fit test?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(g) — respirator use",
-    "rationale": "A seal check checks the fit at that donning. It cannot replace the prescribed fit-test procedure."
+    "rationale": "Past use of the model, medical evaluation, and wet methods do not substitute for fit testing. A seal check and a fit test have different functions."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "Which feature is essential to an asbestos HEPA vacuum?",
     "a": [
       "A HEPA filtration system",
-      "A paper bag labeled for construction dust",
-      "A high-airflow motor without rated filtration",
-      "An exhaust directed toward an open window"
+      "A standard shop vacuum with two paper bags",
+      "A vacuum fitted with an ordinary furnace filter",
+      "A wet/dry vacuum with no exhaust filtration"
     ],
     "correct": 0,
     "explanation": "A HEPA vacuum is used to capture asbestos dust without releasing it through the exhaust.",
@@ -1241,16 +1241,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|Which feature is essential to an asbestos HEPA vacuum?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(l) — housekeeping",
-    "rationale": "High airflow, a paper dust bag, and exhaust location do not establish HEPA filtration."
+    "rationale": "Extra paper bags, ordinary furnace filters, and unfiltered wet/dry vacuums do not establish HEPA filtration."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "A respirator cartridge or filter should be changed according to:",
     "a": [
       "The employer's respiratory protection program and manufacturer guidance",
-      "A fixed calendar interval regardless of condition or instructions",
-      "The visible amount of dust on the outside of the facepiece alone",
-      "The date of the employee's last fit test alone"
+      "A fixed 30-day schedule for all filters",
+      "Only when visible asbestos appears on the filter",
+      "The result of the final clearance sample"
     ],
     "correct": 0,
     "explanation": "Selection and maintenance must follow the written program and relevant manufacturer instructions.",
@@ -1259,16 +1259,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|A respirator cartridge or filter should be changed according to:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(h) — maintenance",
-    "rationale": "A fit-test date, external dust appearance, or arbitrary interval cannot replace the program and relevant manufacturer maintenance criteria."
+    "rationale": "There is no single 30-day rule for every filter. Visible asbestos and final-clearance results are not substitutes for program and manufacturer replacement criteria."
   },
   {
     "category": "Personal Protective and Other Equipment",
     "q": "What must the employer provide for required respiratory protection?",
     "a": [
       "A written respiratory protection program",
-      "A generic manufacturer brochure without site-specific procedures",
-      "An oral procedure that is not documented",
-      "A fit-test certificate as the entire program"
+      "Only an annual fit-test card",
+      "Only a box of HEPA filters",
+      "Only a verbal instruction to check the seal"
     ],
     "correct": 0,
     "explanation": "OSHA requires a written, worksite-specific respiratory protection program.",
@@ -1277,16 +1277,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|What must the employer provide for required respiratory protection?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.134(c) — written program",
-    "rationale": "A brochure, oral instructions, or a fit-test record alone is not a written worksite-specific respiratory protection program."
+    "rationale": "A fit-test card, a supply of filters, or verbal seal-check instructions is only part of protection. The employer must provide the written worksite-specific program."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What is the first control for fiber release during most ACM removal?",
     "a": [
       "Wet the material adequately",
-      "Increase respiratory protection instead of wetting",
-      "Wait for visible dust before applying water",
-      "Dry-remove material and wet the debris afterward"
+      "Rely on the respirator alone",
+      "Apply water after dry removal is finished",
+      "Use the negative-air machine as a substitute for wetting"
     ],
     "correct": 0,
     "explanation": "Wet methods are a primary engineering and work-practice control.",
@@ -1295,16 +1295,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What is the first control for fiber release during most ACM removal?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "Control fibers during disturbance. Respirator upgrades and wetting only after visible dust or removal do not replace adequately wet methods."
+    "rationale": "Wet adequately during disturbance. Respirators, wetting afterward, and negative-air equipment do not automatically replace required wet methods."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What must a regulated area have at each entrance?",
     "a": [
       "Warning signs",
-      "An exposure report without an asbestos warning sign",
-      "A general construction notice without the required asbestos warning",
-      "A sign posted only inside the equipment room"
+      "A negative exposure assessment posted in place of signs",
+      "A personal air sample pump running at all times",
+      "A shower at each doorway regardless of the work class"
     ],
     "correct": 0,
     "explanation": "OSHA requires signs at entrances to regulated areas.",
@@ -1313,16 +1313,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What must a regulated area have at each entrance?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(k)(7) — signs",
-    "rationale": "The rule calls for asbestos warning signs at entrances; a general notice or a sign only inside does not meet that purpose."
+    "rationale": "The entrance needs warning signs. A posted assessment, running sample pump, or a shower is not a substitute for those signs."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Who may enter a regulated area during asbestos work?",
     "a": [
       "Authorized persons",
-      "Any trained person, whether or not authorized",
-      "Any building employee wearing disposable coveralls",
-      "Any visitor whose exposure would last less than 15 minutes"
+      "Any trained employee of the building owner",
+      "Anyone wearing a dust mask",
+      "Any worker with a valid permit regardless of assignment or authorization"
     ],
     "correct": 0,
     "explanation": "Access is restricted to authorized persons.",
@@ -1331,16 +1331,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Who may enter a regulated area during asbestos work?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(e) — regulated areas",
-    "rationale": "Training and clothing alone do not establish authorization; neither does a brief planned visit."
+    "rationale": "Training, a mask, or a permit alone does not establish authorization to enter. Access is restricted to authorized persons under applicable protective requirements."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What is prohibited in asbestos regulated areas?",
     "a": [
       "Eating, drinking, smoking, or chewing",
-      "HEPA vacuuming of contaminated debris",
-      "Use of appropriate protective clothing",
-      "Authorized entry under required protection"
+      "Using HEPA vacuums",
+      "Wearing protective clothing",
+      "Conducting personal air sampling"
     ],
     "correct": 0,
     "explanation": "OSHA prohibits eating, drinking, smoking, chewing tobacco or gum, and applying cosmetics in regulated areas.",
@@ -1349,16 +1349,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What is prohibited in asbestos regulated areas?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(e) — regulated areas",
-    "rationale": "The other choices are protective work practices, not the personal activities prohibited in the regulated area."
+    "rationale": "HEPA vacuuming, protective clothing, and personal sampling are protective work activities. Eating, drinking, smoking, and chewing are prohibited personal activities."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "In the standard three-stage Class I decontamination sequence, where is contaminated protective clothing removed before showering?",
     "a": [
       "In the equipment room",
-      "In the clean room before entering the shower",
-      "In a public changing area after leaving containment",
-      "At a laundry station outside containment before bagging"
+      "In the clean room after showering",
+      "In the public corridor outside containment",
+      "At the waste staging area after the shift"
     ],
     "correct": 0,
     "explanation": "Decontamination facilities are intended to prevent contamination leaving the regulated area.",
@@ -1367,16 +1367,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Where should protective clothing contaminated with asbestos be removed?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(j) — hygiene facilities and practices",
-    "rationale": "The clean room and public changing areas are not places to release contamination from clothing; use the designated contaminated transition."
+    "rationale": "Remove contaminated clothing in the equipment room before showering. The clean room, public corridor, and waste staging area are not substitutes for that personnel exit sequence."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "How should asbestos waste be stored and transported?",
     "a": [
       "In sealed, labeled, impermeable containers",
-      "In labeled containers that allow dust to escape",
-      "In sealed containers without required labels",
-      "In open containers until the end of transportation"
+      "In labeled but unsealed containers",
+      "In sealed containers without labels",
+      "In ordinary bags if the waste is kept wet"
     ],
     "correct": 0,
     "explanation": "OSHA requires asbestos waste and contaminated clothing to be placed in sealed, labeled, impermeable containers.",
@@ -1385,16 +1385,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|How should asbestos waste be stored and transported?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(l) — housekeeping",
-    "rationale": "Containment must prevent leakage and include required labels. A labeled but leaking container or an unlabeled sealed container is incomplete."
+    "rationale": "Containers must prevent leakage and carry required labels. Wet waste does not make an ordinary bag adequate, and labeling alone does not close a container."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Which cleaning technique is allowed for asbestos-contaminated surfaces?",
     "a": [
       "HEPA vacuuming",
-      "Dry sweeping followed by HEPA vacuuming",
-      "Compressed air without dust-cloud capture",
-      "An ordinary shop vacuum fitted with a paper bag"
+      "Dry sweeping followed by wet wiping",
+      "Compressed air with no capture system",
+      "A standard shop vacuum with a fine-dust bag"
     ],
     "correct": 0,
     "explanation": "HEPA vacuuming is an accepted cleanup method.",
@@ -1403,16 +1403,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Which cleaning technique is allowed for asbestos-contaminated surfaces?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "An ordinary shop vacuum is not equivalent to HEPA filtration. Dry sweeping or uncontrolled compressed air can re-suspend fibers."
+    "rationale": "A fine-dust bag is not proof of HEPA filtration. Dry sweeping and compressed air without capture can re-suspend contamination."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "When may compressed air be used to remove asbestos dust?",
     "a": [
       "Only with an enclosed ventilation system that captures the dust",
-      "When all nearby workers wear respirators",
-      "When the task lasts less than 15 minutes",
-      "When air monitoring from the previous shift was below the PEL"
+      "When a HEPA vacuum has already been used",
+      "When the asbestos is still adequately wet",
+      "When the worker is wearing an approved respirator"
     ],
     "correct": 0,
     "explanation": "OSHA generally prohibits compressed-air cleaning unless used with ventilation that captures the dust cloud.",
@@ -1421,16 +1421,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|When may compressed air be used to remove asbestos dust?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "Respirators, short duration, and an earlier low sample result do not replace capture of the dust cloud."
+    "rationale": "The exception depends on capturing the dust cloud with the specified ventilation. Prior HEPA vacuuming, wet material, or a respirator alone does not authorize uncontrolled compressed air."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Why must workers use decontamination procedures when leaving Class I regulated areas?",
     "a": [
       "To avoid carrying asbestos into clean areas",
-      "To replace exposure assessment for short visits",
-      "To establish final clearance for the work area",
-      "To eliminate the need to contain contaminated clothing"
+      "To establish that airborne fiber levels are below the PEL",
+      "To eliminate the need for protective clothing inside containment",
+      "To permit removal of waste without sealed containers"
     ],
     "correct": 0,
     "explanation": "Decontamination limits transfer of asbestos contamination.",
@@ -1439,16 +1439,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Why must workers use decontamination procedures when leaving Class I regulated areas?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(j) — hygiene facilities and practices",
-    "rationale": "Decontamination prevents carryout on people and equipment. It does not establish clearance or waive exposure assessment or clothing containment."
+    "rationale": "Decontamination limits carryout. It does not prove a below-limit airborne concentration or waive protective clothing and sealed waste handling."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "For Class I work, the competent person must inspect the worksite:",
     "a": [
       "At least once during each work shift",
-      "Once at the start of the entire project",
-      "Once per calendar week",
-      "Only after an exposure result exceeds the PEL"
+      "Once at setup and again only at final clearance",
+      "Once a week while removal continues",
+      "Only after a monitoring result exceeds the PEL"
     ],
     "correct": 0,
     "explanation": "For Class I jobs, the competent person must inspect at least once during each work shift and at any time an employee requests an inspection.",
@@ -1457,16 +1457,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|For Class I work, the competent person must inspect the worksite:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "An initial inspection, weekly schedule, or waiting for an above-limit result does not meet the Class I inspection schedule."
+    "rationale": "At least one inspection per shift is required for Class I, and employee requests also trigger inspections. Setup/final-only, weekly, or exceedance-only inspections miss that schedule."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "If a negative-pressure enclosure loses pressure during removal, what should the supervisor do?",
     "a": [
       "Stop and restore the enclosure controls",
-      "Continue removal while waiting for the next sample result",
-      "Open a barrier flap to equalize pressure",
-      "Compensate only by upgrading respirators"
+      "Continue while the HEPA units are running, even if pressure is lost",
+      "Open a door to increase general ventilation",
+      "Wait for the next routine inspection before correcting it"
     ],
     "correct": 0,
     "explanation": "A failure of enclosure pressure calls for corrective action before continuing uncontrolled work.",
@@ -1475,16 +1475,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|If a negative-pressure enclosure loses pressure during removal, what should the supervisor do?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Address failed enclosure controls before continuing affected removal. Opening barriers or relying solely on respirators does not restore containment."
+    "rationale": "Running HEPA units alone does not establish that required enclosure pressure is maintained. Opening a door or postponing correction does not restore the failed control."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "When asbestos-containing floor tile is removed as Class II work, OSHA generally requires it to be:",
     "a": [
       "Removed intact where feasible",
-      "Broken into small pieces before wetting",
-      "Sanded to remove the surface coating",
-      "Dry-scraped to separate the backing"
+      "Cut into smaller pieces first to fit waste bags",
+      "Dry sanded to loosen adhesive",
+      "Broken along each seam to speed removal"
     ],
     "correct": 0,
     "explanation": "Class II floor tile methods emphasize intact removal and prohibit aggressive techniques.",
@@ -1493,16 +1493,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|When asbestos-containing floor tile is removed as Class II work, OSHA generally requires it to be:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g)(8)(i) — flooring",
-    "rationale": "Deliberately breaking, sanding, or dry-scraping is not intact removal where feasible."
+    "rationale": "Preserve intact tile where feasible. Cutting to fit bags, dry sanding, and intentional breaking do not follow that objective."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What is the purpose of a glove bag for eligible small TSI jobs?",
     "a": [
       "To isolate the disturbance and contain released fibers",
-      "To exempt the operation from competent-person supervision",
-      "To replace required respirators for all small jobs",
-      "To allow repeated use without integrity checks"
+      "Replace the regulated area designation",
+      "Eliminate all need for respirator selection",
+      "Permit removal without waste containment"
     ],
     "correct": 0,
     "explanation": "A glove bag provides local containment for appropriate work when used under required procedures.",
@@ -1511,16 +1511,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What is the purpose of a glove bag for eligible small TSI jobs?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "A glove bag locally contains the operation. It does not automatically waive supervision, respirator use, or integrity checks."
+    "rationale": "A glove bag contains the local disturbance. It does not automatically replace regulated-area requirements, respirator selection, or waste containment."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What should happen to a glove bag before it is removed from the work area?",
     "a": [
       "The contained material and bag must be handled without releasing fibers",
-      "Opened before collapsing so the air escapes into the room",
-      "Moved into the clean room for emptying",
-      "Saved with loose waste inside for reuse"
+      "Open it for a visual check of remaining material",
+      "Deflate it directly into the work area",
+      "Move it to the clean room before sealing it"
     ],
     "correct": 0,
     "explanation": "Glove-bag waste handling must prevent fiber release.",
@@ -1529,16 +1529,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What should happen to a glove bag before it is removed from the work area?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Keep waste and released fibers contained through collapse and removal. Venting into the room or opening the bag on the clean side defeats containment."
+    "rationale": "Control the contents and air through handling and removal. Opening the bag, venting it into the room, or moving it to the clean side before sealing can release fibers."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "How does OSHA's construction asbestos rule treat dry sweeping of ACM dust and debris?",
     "a": [
       "It is prohibited",
-      "Allowed when all workers wear respirators",
-      "Allowed after the waste dries",
-      "Allowed below the PEL without other conditions"
+      "Allowed when material is nonfriable",
+      "Allowed with a respirator after gross removal",
+      "Allowed when done before HEPA vacuuming"
     ],
     "correct": 0,
     "explanation": "OSHA prohibits dry sweeping, shoveling, and other dry cleanup of dust and debris containing ACM or PACM.",
@@ -1547,16 +1547,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|How does OSHA's construction asbestos rule treat dry sweeping of ACM dust and debris?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g)(1)–(3) — work controls",
-    "rationale": "Respirators, low measured exposure, or dried waste do not authorize dry sweeping of ACM dust and debris."
+    "rationale": "Nonfriability, wearing a respirator, or planning HEPA vacuuming afterward does not authorize dry sweeping of ACM dust and debris."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What is the main purpose of a critical barrier?",
     "a": [
       "Seal openings between the work area and adjacent spaces",
-      "Provide replacement air through unsealed building openings",
-      "Replace required air-cleaning equipment",
-      "Replace the worker decontamination route"
+      "Maintain a positive-pressure work area",
+      "Replace the decontamination chamber",
+      "Provide a location for clearance air samples"
     ],
     "correct": 0,
     "explanation": "Critical barriers help isolate the regulated work area.",
@@ -1565,16 +1565,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What is the main purpose of a critical barrier?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "A critical barrier closes migration pathways. It is not replacement air, air-cleaning equipment, or a decontamination system."
+    "rationale": "Critical barriers seal migration pathways. They do not create positive pressure, replace the decontamination chamber, or primarily serve as sampling locations."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "Why should removed ACM be bagged promptly?",
     "a": [
       "To minimize opportunities for fiber release and migration",
-      "To permit removal without adequately wet methods",
-      "To eliminate the need for waste labels",
-      "To allow contaminated bags to pass through clean areas"
+      "To replace disposal labels",
+      "To satisfy the employee fit-test requirement",
+      "To make the negative-air machine unnecessary"
     ],
     "correct": 0,
     "explanation": "Prompt containment reduces the chance of release while waste is handled.",
@@ -1583,16 +1583,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Why should removed ACM be bagged promptly?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(l) — housekeeping",
-    "rationale": "Prompt packaging reduces handling-related release. It does not waive wet methods, labels, or clean handling of the container exterior."
+    "rationale": "Prompt bagging reduces opportunities for release. It does not replace labels, fit testing, or required negative-air controls."
   },
   {
     "category": "Testing Methodologies",
     "q": "The OSHA asbestos PEL is measured as:",
     "a": [
       "An eight-hour time-weighted average",
-      "A 30-minute average",
-      "An instantaneous ceiling",
-      "An average over the calendar year"
+      "The highest 30-minute average during the shift",
+      "A ceiling value measured at any instant",
+      "A final clearance result from inside containment"
     ],
     "correct": 0,
     "explanation": "The permissible exposure limit is an eight-hour TWA.",
@@ -1601,7 +1601,7 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|The OSHA asbestos PEL is measured as:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(c) — exposure limits",
-    "rationale": "Thirty minutes is the excursion-limit period; an instantaneous reading or annual average is not the eight-hour TWA."
+    "rationale": "The PEL uses an eight-hour TWA. The 30-minute excursion limit, an instantaneous ceiling, and final-clearance results are different measures."
   },
   {
     "category": "Testing Methodologies",
@@ -1610,7 +1610,7 @@ const QUESTIONS = [
       "30 minutes",
       "15 minutes",
       "60 minutes",
-      "Eight hours"
+      "8 hours"
     ],
     "correct": 0,
     "explanation": "The excursion limit is a 30-minute average.",
@@ -1619,16 +1619,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|The OSHA excursion limit is averaged over:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(c) — exposure limits",
-    "rationale": "Do not substitute the eight-hour PEL period or a different short-term sampling duration."
+    "rationale": "The excursion averaging period is 30 minutes, not 15, 60, or the eight hours used for the TWA PEL."
   },
   {
     "category": "Testing Methodologies",
     "q": "What should an employer do after exposure monitoring shows a worker above the PEL?",
     "a": [
       "Notify the affected worker of the result and corrective action",
-      "Report only the numerical result without corrective action",
-      "Wait for the next annual training to disclose the result",
-      "Notify only the supervisor because workers wore respirators"
+      "Notify only the building owner",
+      "Wait until the final project report to notify the worker",
+      "Rely on the respirator and make no corrective assessment"
     ],
     "correct": 0,
     "explanation": "OSHA requires notice to affected employees and identification of corrective action when levels exceed a limit.",
@@ -1637,16 +1637,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|What should an employer do after exposure monitoring shows a worker above the PEL?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(f) — exposure assessment and monitoring",
-    "rationale": "Affected employees must receive the result and the corrective action when a limit is exceeded; informing only the supervisor is insufficient."
+    "rationale": "Inform the affected employee of the result and corrective action. Owner-only notice, delay until the final report, and relying solely on a respirator are insufficient."
   },
   {
     "category": "Testing Methodologies",
     "q": "Where is a representative personal air sample collected?",
     "a": [
       "Near the worker's breathing zone",
-      "At a fixed station by the containment entrance",
-      "At the negative-air exhaust outlet",
-      "In the clean room during worker breaks"
+      "At a fixed point near the negative-air exhaust",
+      "At the clean side of the decontamination unit",
+      "At a fixed point in the work area away from the worker"
     ],
     "correct": 0,
     "explanation": "Personal exposure sampling reflects air in the worker's breathing zone.",
@@ -1655,16 +1655,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|Where is a representative personal air sample collected?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(f) — exposure assessment and monitoring",
-    "rationale": "Exposure monitoring must represent what the employee breathes, not just conditions at an entrance, exhaust, or clean room."
+    "rationale": "Sample representative breathing-zone exposure. An exhaust, clean-side station, or distant area sampler does not automatically represent what the worker breathes."
   },
   {
     "category": "Testing Methodologies",
     "q": "What does a negative exposure assessment support?",
     "a": [
       "A documented conclusion that expected exposures will be below both limits",
-      "A conclusion that no asbestos is present in the material",
-      "A permanent exemption covering every future removal method",
-      "A conclusion that only the eight-hour PEL will be met"
+      "A decision that the material is not ACM",
+      "A waiver of all exposure controls",
+      "A clearance determination for reoccupancy"
     ],
     "correct": 0,
     "explanation": "OSHA defines a negative exposure assessment for a specific operation based on evidence exposures will remain below the PEL and excursion limit.",
@@ -1673,16 +1673,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|What does a negative exposure assessment support?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(f) — exposure assessment and monitoring",
-    "rationale": "An assessment addresses the specific operation and both limits; it does not establish asbestos-free material or a permanent project-wide exemption."
+    "rationale": "A negative exposure assessment concerns expected exposure for the operation. It does not establish non-ACM, waive all controls, or certify reoccupancy clearance."
   },
   {
     "category": "Testing Methodologies",
     "q": "Who is responsible for ensuring that required employee exposure monitoring is performed under OSHA’s construction asbestos standard?",
     "a": [
       "The employer",
-      "The building owner in place of the employer in every case",
-      "The waste transporter in place of the employer",
-      "The employee individually, without employer responsibility"
+      "The building owner, regardless of who employs the workers",
+      "The licensed abatement supervisor personally, rather than the employer",
+      "The air-monitoring laboratory, which alone decides whether monitoring is required"
     ],
     "correct": 0,
     "explanation": "The employer must ensure that required monitoring is performed. This assigns responsibility; it does not require the employer personally to operate the sampling equipment.",
@@ -1691,16 +1691,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|Who must perform exposure monitoring under OSHA's construction asbestos rule?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(f) — exposure assessment and monitoring",
-    "rationale": "Hiring a sampling consultant or working for a building owner does not transfer the employer’s duty to ensure representative monitoring."
+    "rationale": "The employer is responsible for ensuring required monitoring occurs. Qualified personnel may perform it, but that does not transfer the duty solely to the owner, supervisor, or laboratory."
   },
   {
     "category": "Testing Methodologies",
     "q": "Why do results from one task not automatically establish exposure for a different task?",
     "a": [
       "Conditions and disturbance methods may differ",
-      "All monitoring from previous projects is automatically invalid",
-      "Only building age determines whether results transfer",
-      "The same respirator makes any earlier sample representative"
+      "The same material always gives the same exposure",
+      "A bulk sample replaces air monitoring for every task",
+      "A negative exposure assessment covers all future methods"
     ],
     "correct": 0,
     "explanation": "Exposure assessments must represent the operation and conditions.",
@@ -1709,16 +1709,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|Why do results from one task not automatically establish exposure for a different task?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(f) — exposure assessment and monitoring",
-    "rationale": "Earlier evidence can be useful only if representative. Neither building age nor the same respirator makes a different method’s exposure equivalent."
+    "rationale": "Exposure depends on conditions and methods as well as material. Bulk samples do not replace task-specific air assessment, and a negative exposure assessment is not a blanket exemption for future methods."
   },
   {
     "category": "Testing Methodologies",
     "q": "What does PCM count in a standard airborne asbestos analysis?",
     "a": [
       "Fibers meeting specified counting criteria",
-      "The asbestos percentage by weight in bulk material",
-      "The mineral identity of every counted fiber",
-      "Only fibers proven individually to be asbestos"
+      "Only fibers chemically identified as asbestos",
+      "All particles regardless of size or shape",
+      "The mass of asbestos collected on the filter"
     ],
     "correct": 0,
     "explanation": "Phase-contrast microscopy counts fibers using specified criteria; it does not identify mineral type by itself.",
@@ -1727,16 +1727,16 @@ const QUESTIONS = [
     "legacyId": "Testing Methodologies|What does PCM count in a standard airborne asbestos analysis?",
     "kind": "Recall",
     "sourceLabel": "OSHA Appendix A — reference counting method",
-    "rationale": "PCM counts fibers meeting the method’s criteria; it cannot identify each fiber’s mineral type or report bulk percent by weight."
+    "rationale": "PCM applies fiber-counting criteria. It neither chemically identifies each fiber as asbestos, counts every particle, nor weighs the asbestos collected."
   },
   {
     "category": "Additional Safety Hazards",
     "q": "What conventional hazard can wet asbestos removal increase?",
     "a": [
       "Electrical shock",
-      "Oxygen enrichment caused by misting",
-      "Carbon monoxide generated by water",
-      "Higher ultraviolet exposure from wet surfaces"
+      "Respirator filter efficiency falling below its rating",
+      "Asbestos changing into a soluble chemical",
+      "Radiation from wetted insulation"
     ],
     "correct": 0,
     "explanation": "Water near electrical equipment requires electrical hazard controls.",
@@ -1745,16 +1745,16 @@ const QUESTIONS = [
     "legacyId": "Additional Safety Hazards|What conventional hazard can wet asbestos removal increase?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "Wetting near energized systems can create a shock hazard. Misting does not inherently create oxygen enrichment, carbon monoxide, or UV exposure."
+    "rationale": "Water near energized equipment can create an electrical hazard. It does not inherently create radiation or dissolve asbestos, and reduced filter efficiency is not the conventional hazard asked here."
   },
   {
     "category": "Additional Safety Hazards",
     "q": "Why might an asbestos worker need a heat-stress plan?",
     "a": [
       "Protective clothing and respirators can increase heat burden",
-      "Wet methods remove the need for heat precautions",
-      "Passing a respirator medical evaluation rules out heat illness",
-      "A HEPA filter protects against body-heat buildup"
+      "HEPA filtration increases core body temperature directly",
+      "Wet methods always eliminate the need for breaks",
+      "A respirator prevents dehydration"
     ],
     "correct": 0,
     "explanation": "The physical burden of PPE can contribute to heat stress.",
@@ -1763,16 +1763,16 @@ const QUESTIONS = [
     "legacyId": "Additional Safety Hazards|Why might an asbestos worker need a heat-stress plan?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "PPE can increase heat burden. Wet methods, medical clearance, and HEPA filters do not rule out heat illness."
+    "rationale": "PPE can increase heat burden and impede cooling. HEPA filtration does not directly heat the body, wet methods do not eliminate breaks, and a respirator does not prevent dehydration."
   },
   {
     "category": "Additional Safety Hazards",
     "q": "Before working above a ceiling, a supervisor should evaluate:",
     "a": [
       "Fall and structural hazards",
-      "Only airborne asbestos because the ceiling is inside containment",
-      "Only the worker's asbestos permit",
-      "Only the most recent air-monitoring result"
+      "Only the asbestos content of ceiling tiles",
+      "Only the negative-air machine capacity",
+      "Only whether clearance sampling will be aggressive"
     ],
     "correct": 0,
     "explanation": "Asbestos work can expose workers to falls and structural hazards.",
@@ -1781,16 +1781,16 @@ const QUESTIONS = [
     "legacyId": "Additional Safety Hazards|Before working above a ceiling, a supervisor should evaluate:",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "Work above ceilings can involve unstable surfaces and falls. An asbestos permit or air sample does not evaluate structural safety."
+    "rationale": "Ceiling work requires attention to falls and structural safety. Bulk content, air-machine capacity, and clearance method do not evaluate whether the work surface or access is safe."
   },
   {
     "category": "Additional Safety Hazards",
     "q": "What should a supervisor assess before assigning work in a confined space?",
     "a": [
       "Entry hazards and applicable confined-space requirements",
-      "Whether asbestos exposure is below the PEL, as the sole entry criterion",
-      "Whether a worker's asbestos training replaces an entry evaluation",
-      "Whether a HEPA respirator removes all atmospheric hazards"
+      "Only the asbestos percentage in the material",
+      "Only whether negative air is available",
+      "Only the planned clearance method"
     ],
     "correct": 0,
     "explanation": "Confined-space conditions can present atmospheric and rescue hazards beyond asbestos.",
@@ -1799,7 +1799,7 @@ const QUESTIONS = [
     "legacyId": "Additional Safety Hazards|What should a supervisor assess before assigning work in a confined space?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(k)(9)(viii) — training topics, including other hazards",
-    "rationale": "A confined space can present hazards that asbestos air samples and particulate respirators do not address, including atmospheric and rescue concerns."
+    "rationale": "Evaluate the space's entry, atmospheric, and rescue hazards and applicable requirements. Asbestos percentage, negative air, and a planned clearance method alone are not an entry assessment."
   },
   {
     "category": "Regulations",
@@ -1807,8 +1807,8 @@ const QUESTIONS = [
     "a": [
       "Department of Labor and Workforce Development",
       "Department of Health",
-      "Department of Environmental Protection",
-      "Department of Community Affairs"
+      "Department of Community Affairs",
+      "Department of Environmental Protection"
     ],
     "correct": 0,
     "explanation": "NJ LWD issues performance permits.",
@@ -1817,7 +1817,7 @@ const QUESTIONS = [
     "legacyId": "Regulations|Which NJ agency issues asbestos worker and supervisor permits?",
     "kind": "Recall",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "NJDOH certifies training and approves the examination; the individual permits come from NJ LWD."
+    "rationale": "NJ LWD issues worker and supervisor permits. Health, Community Affairs, and Environmental Protection have different asbestos responsibilities."
   },
   {
     "category": "Regulations",
@@ -1825,8 +1825,8 @@ const QUESTIONS = [
     "a": [
       "Department of Health",
       "Department of Labor and Workforce Development",
-      "Department of Environmental Protection",
-      "Department of Community Affairs"
+      "Department of Community Affairs",
+      "Department of Environmental Protection"
     ],
     "correct": 0,
     "explanation": "NJDOH oversees course certification and the approved examination.",
@@ -1835,7 +1835,7 @@ const QUESTIONS = [
     "legacyId": "Regulations|Which NJ agency certifies asbestos training courses and approves the examination?",
     "kind": "Recall",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "This asks about training and examination oversight, which is distinct from LWD’s permit issuance."
+    "rationale": "NJDOH oversees training-course certification and the approved examination. Permit issuance by LWD is a distinct role."
   },
   {
     "category": "Regulations",
@@ -1860,9 +1860,9 @@ const QUESTIONS = [
     "q": "Under NJ law, a permitted asbestos employee must keep the permit:",
     "a": [
       "On their person and available for inspection",
-      "At the employer's office only",
-      "With the building owner's project files only",
-      "In the waste transporter's vehicle only"
+      "At the employer office and available by phone",
+      "In the supervisor's vehicle throughout the project",
+      "With the building owner until final clearance"
     ],
     "correct": 0,
     "explanation": "The permit must be carried and available for inspection.",
@@ -1871,7 +1871,7 @@ const QUESTIONS = [
     "legacyId": "Regulations|Under NJ law, a permitted asbestos employee must keep the permit:",
     "kind": "Recall",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "Keeping a permit only in an office, owner file, or vehicle does not meet the requirement to carry it and make it available."
+    "rationale": "The permit must be carried and available for inspection. An office phone contact, vehicle copy, or owner-held record does not meet that requirement."
   },
   {
     "category": "Regulations",
@@ -1896,9 +1896,9 @@ const QUESTIONS = [
     "q": "A licensed NJ asbestos employer must post at the site:",
     "a": [
       "A sign stating licensed by New Jersey for asbestos work",
-      "Only a copy of the final air-clearance report",
-      "Only the building owner's renovation permit",
-      "Only a general construction safety sign"
+      "A copy of every employee's medical record",
+      "A copy of the final clearance report before work starts",
+      "A notice stating the company is EPA accredited"
     ],
     "correct": 0,
     "explanation": "The Act requires a readily visible licensed-for-asbestos-work sign.",
@@ -1907,7 +1907,7 @@ const QUESTIONS = [
     "legacyId": "Regulations|A licensed NJ asbestos employer must post at the site:",
     "kind": "Recall",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "The required licensing sign is distinct from a building permit, general safety sign, or final clearance report."
+    "rationale": "The licensing sign is distinct from medical records, a final-clearance report, or a claim of EPA accreditation. Medical information is not the required public sign."
   },
   {
     "category": "Regulations",
@@ -1968,9 +1968,9 @@ const QUESTIONS = [
     "q": "Who may inspect asbestos licenses and permits under the NJ Act?",
     "a": [
       "Authorized state enforcement representatives",
-      "Only the contractor's private consultant",
-      "Only the property owner's representative",
-      "Only the employee who holds the permit"
+      "Only the contracting building owner",
+      "Only the project air-monitoring firm",
+      "Only a federal OSHA compliance officer"
     ],
     "correct": 0,
     "explanation": "Required credentials must be available for inspection by authorized representatives.",
@@ -1979,7 +1979,7 @@ const QUESTIONS = [
     "legacyId": "Legal Considerations|Who may inspect asbestos licenses and permits under the NJ Act?",
     "kind": "Recall",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "State enforcement authority is not limited to the contractor’s consultant, the owner’s representative, or the permit holder."
+    "rationale": "Authorized state representatives have inspection authority under the NJ Act. It is not limited to the owner, private monitoring firm, or federal OSHA alone."
   },
   {
     "category": "Legal Considerations",
@@ -2076,9 +2076,9 @@ const QUESTIONS = [
     "q": "Who supervises Class I asbestos work under OSHA?",
     "a": [
       "A designated competent person",
-      "The building owner regardless of asbestos qualifications",
-      "Any worker with a current worker permit",
-      "The air-sampling technician regardless of training or authority"
+      "The project designer who wrote the specifications",
+      "The building owner or facility manager",
+      "The air-sampling technician who takes clearance samples"
     ],
     "correct": 0,
     "explanation": "Class I work must be supervised by a competent person.",
@@ -2087,16 +2087,16 @@ const QUESTIONS = [
     "legacyId": "Supervisory|Who supervises Class I asbestos work under OSHA?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "The title “owner,” “worker,” or “sampling technician” alone does not establish the required competent-person qualifications and authority."
+    "rationale": "The work must be supervised by a qualified designated competent person. Being a designer, owner, or sampling technician alone does not establish that designation and authority."
   },
   {
     "category": "Supervisory",
     "q": "Before starting removal, what should a supervisor confirm?",
     "a": [
       "Controls, worker training, PPE, and regulated area are ready",
-      "Training certificates alone, with controls checked after work starts",
-      "PPE alone, with the regulated area established later",
-      "The work schedule alone, using the prior project's controls"
+      "That a previous crew's exposure assessment automatically covers any new method",
+      "That a permit alone substitutes for preparing the regulated area",
+      "That clearance sampling can replace pre-job controls"
     ],
     "correct": 0,
     "explanation": "Supervision includes ensuring required controls and worker protections are in place.",
@@ -2105,7 +2105,7 @@ const QUESTIONS = [
     "legacyId": "Supervisory|Before starting removal, what should a supervisor confirm?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "Check the complete work setup before removal. Training or PPE alone does not establish that the area and controls are ready."
+    "rationale": "Confirm protections and preparation before removal. A previous assessment may not cover a new method, and neither a permit nor later clearance replaces pre-job controls."
   },
   {
     "category": "Supervisory",
@@ -2148,9 +2148,9 @@ const QUESTIONS = [
     "q": "Resilient flooring installed in 1978 will be removed. What is needed before treating that flooring as non-asbestos under OSHA’s flooring provision?",
     "a": [
       "An industrial hygienist’s asbestos-free determination using recognized analytical techniques",
-      "A visual finding that the flooring is in good condition",
-      "An eight-hour air sample below the PEL",
-      "A determination based solely on the building's current use"
+      "An intact appearance and no visible dust",
+      "One prior air sample below the PEL",
+      "The owner's statement that no asbestos was used"
     ],
     "correct": 0,
     "explanation": "For flooring installed no later than 1980, OSHA requires the employer to assume it contains asbestos unless an industrial hygienist determines it is asbestos-free using recognized analytical techniques.",
@@ -2159,7 +2159,7 @@ const QUESTIONS = [
     "legacyId": "General Topics Related to Asbestos|A contractor finds resilient flooring in a building constructed in 1978. Before treating it as non-asbestos, what is required?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(g)(8)(i)(I) — older flooring",
-    "rationale": "Good condition, a below-limit air sample, and building use do not establish the material’s asbestos content. The flooring provision is separate from the PACM definition for older TSI and surfacing material."
+    "rationale": "Appearance and a below-limit air sample do not establish the flooring's material content. An owner's assurance does not replace the required analytical determination."
   },
   {
     "category": "General Topics Related to Asbestos",
@@ -2202,9 +2202,9 @@ const QUESTIONS = [
     "q": "Who determines whether an employee is medically able to use a respirator?",
     "a": [
       "A physician or other licensed health care professional",
-      "The supervisor who conducts fit testing",
-      "The employer's safety manager without a clinical license",
-      "The worker based on a successful seal check"
+      "The supervisor after reviewing the fit-test results",
+      "The respirator program administrator after a user seal check",
+      "The worker based only on the absence of symptoms"
     ],
     "correct": 0,
     "explanation": "The respiratory protection standard assigns the medical evaluation to a physician or other licensed health care professional.",
@@ -2213,7 +2213,7 @@ const QUESTIONS = [
     "legacyId": "Health and Medical Considerations|Who determines whether an employee is medically able to use a respirator?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1910.134(e) — medical evaluation",
-    "rationale": "A supervisor, unlicensed safety manager, or worker cannot replace the designated physician or other licensed health care professional’s evaluation."
+    "rationale": "A physician or other licensed health care professional performs the medical evaluation. Fit tests, seal checks, and absence of symptoms do not authorize a supervisor, administrator, or worker to replace that clinical determination."
   },
   {
     "category": "Health and Medical Considerations",
@@ -2238,9 +2238,9 @@ const QUESTIONS = [
     "q": "A worker passes a fit test with one make, model, style, and size of tight-fitting respirator. May the worker switch to a different facepiece without another fit test?",
     "a": [
       "No; the employee must be fit tested with the facepiece that will be used",
-      "Yes, if the replacement is the same nominal size",
-      "Yes, for any facepiece made by the same manufacturer",
-      "Yes, if a user seal check is satisfactory"
+      "Yes, if the new facepiece is the same size",
+      "Yes, if both facepieces use the same filter",
+      "Yes, if the worker passes a user seal check"
     ],
     "correct": 0,
     "explanation": "Fit testing is specific to the same make, model, style, and size of respirator that the employee will use.",
@@ -2249,7 +2249,7 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|A worker passes a fit test with one make, model, style, and size of tight-fitting respirator. May the worker switch to a different facepiece without another fit test?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1910.134(f) — fit testing",
-    "rationale": "The fit test applies to make, model, style, and size together. Nominal size, brand, or a seal check alone is insufficient."
+    "rationale": "The test must match the make, model, style, and size used. Same size, matching filters, and a successful seal check do not alone establish a valid fit test for a different facepiece."
   },
   {
     "category": "Personal Protective and Other Equipment",
@@ -2274,9 +2274,9 @@ const QUESTIONS = [
     "q": "What filter efficiency does OSHA require for powered and non-powered air-purifying respirators used for asbestos?",
     "a": [
       "HEPA filtration",
-      "An N95 filter",
-      "An organic-vapor cartridge without particulate filtration",
-      "An R95 filter"
+      "An N95 filter for all exposure levels",
+      "An organic-vapor cartridge without a particulate filter",
+      "A standard dust filter whenever the material is wet"
     ],
     "correct": 0,
     "explanation": "OSHA requires high-efficiency filters for powered and non-powered air-purifying respirators used for asbestos exposure.",
@@ -2285,16 +2285,16 @@ const QUESTIONS = [
     "legacyId": "Personal Protective and Other Equipment|What filter efficiency does OSHA require for powered and non-powered air-purifying respirators used for asbestos?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(h)(3) — respirator selection",
-    "rationale": "N95 and R95 filters are not HEPA filters. An organic-vapor cartridge alone does not provide the specified particulate filtration."
+    "rationale": "N95, an organic-vapor cartridge alone, and an ordinary dust filter are not the specified HEPA filtration. Wet material does not waive the applicable filter requirement."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "A power cutting machine is used on asbestos-containing roofing. Unless the competent person determines that misting substantially decreases worker safety, what does OSHA require?",
     "a": [
       "Continuous misting during use",
-      "Misting only when visible dust appears",
-      "Dry cutting whenever the work is outdoors",
-      "Replacing blade misting with respirators in every case"
+      "A respirator for the operator as the only dust control",
+      "A negative-air unit at the far end of the roof as the only control",
+      "A visual dust check instead of a cutting control"
     ],
     "correct": 0,
     "explanation": "The cutting machine must be continuously misted during use. Dust-collection requirements also depend on the roof surface and operation; misting and dust collection are not simply interchangeable choices.",
@@ -2303,16 +2303,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|A crew plans to remove asbestos-containing roofing material using a power cutter. Which control is required for the cutting machine?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(g)(8)(ii) — roofing",
-    "rationale": "Outdoor work and respirator use do not automatically waive misting. Waiting until dust is visible does not meet continuous misting during use."
+    "rationale": "An operator's respirator, a distant negative-air unit, and a visual dust check do not replace required continuous misting of the cutter. The competent-person safety exception and additional dust-handling rules still matter."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "For Class I removal exceeding 25 linear or 10 square feet of TSI or surfacing ACM, which answer describes OSHA’s additional control-method requirement?",
     "a": [
       "Use a specified Class I control method or a compliant alternative method",
-      "A positive-pressure enclosure",
-      "A negative exposure assessment with no additional work controls",
-      "A regulated-area sign as the only enclosure control"
+      "Critical barriers alone as the complete control for every operation",
+      "A respirator program in place of a work-area control",
+      "A positive-pressure enclosure with filtered supply air"
     ],
     "correct": 0,
     "explanation": "The employer must use a method specified in §1926.1101(g)(5), or meet the alternative-method conditions in (g)(6). A negative-pressure enclosure is one permitted approach; it is not the only option.",
@@ -2321,16 +2321,16 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|During Class I work involving more than 25 linear or 10 square feet of TSI or surfacing material, which setup is generally required unless an allowed alternative is used?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "Positive pressure, a sign alone, or an exposure assessment without the required controls is not a substitute for an authorized control method."
+    "rationale": "Use a specified Class I method or meet the alternative-method conditions. Critical barriers alone for every operation, a respirator program alone, and positive pressure do not establish compliant work-area controls."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
     "q": "What should be done with impermeable dropcloths used beneath certain Class II removal operations?",
     "a": [
       "Keep them in place until they are cleaned with a HEPA vacuum or otherwise disposed of properly",
-      "Fold them dirty and reuse them on the next project",
-      "Remove them before cleaning to speed up waste transfer",
-      "Dry sweep them before carrying them through clean areas"
+      "Fold and store them without cleaning until final clearance",
+      "Dry brush them before folding for reuse",
+      "Remove them before cleaning the surrounding work area"
     ],
     "correct": 0,
     "explanation": "Dropcloths used to capture asbestos debris must be cleaned with a HEPA vacuum or disposed of in a manner that prevents fiber release.",
@@ -2339,7 +2339,7 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|What should be done with impermeable dropcloths used beneath certain Class II removal operations?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(l) — housekeeping",
-    "rationale": "Moving or reusing contaminated dropcloths without controlled cleaning or disposal can spread fibers. Dry sweeping is not the required cleaning approach."
+    "rationale": "Do not fold and store contaminated dropcloths without controlled cleaning or disposal. Dry brushing can release fibers, and premature removal can spread remaining contamination."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
@@ -2382,9 +2382,9 @@ const QUESTIONS = [
     "q": "Why should HVAC openings in or serving an asbestos work area be isolated when required by the work plan?",
     "a": [
       "To prevent fibers from entering the ventilation system and spreading",
-      "To establish that bulk material is non-asbestos",
-      "To substitute for personal exposure monitoring",
-      "To provide a substitute for decontamination"
+      "To replace the need for critical barriers at openings",
+      "To make the work area positively pressurized",
+      "To eliminate personal exposure monitoring"
     ],
     "correct": 0,
     "explanation": "Isolating ventilation pathways helps keep asbestos fibers from migrating to other building areas.",
@@ -2393,7 +2393,7 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Why should HVAC openings in or serving an asbestos work area be isolated when required by the work plan?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(g) — work practices",
-    "rationale": "HVAC isolation addresses a migration pathway. It does not determine material content or replace exposure monitoring and worker decontamination."
+    "rationale": "Isolation blocks a ventilation pathway for migration. It does not automatically replace other critical barriers or personal monitoring, and positive pressure is not the goal."
   },
   {
     "category": "Testing Methodologies",
@@ -2454,9 +2454,9 @@ const QUESTIONS = [
     "q": "A worker in protective clothing becomes confused and unsteady in hot containment. What is the supervisor’s best response?",
     "a": [
       "Treat it as a medical emergency, remove the worker from heat, and obtain emergency help",
-      "Rest the worker inside the hot containment until the shift ends",
-      "Wait for a high body-temperature reading before seeking help",
-      "Treat it only as dehydration and send the worker home alone"
+      "Have the worker rest in the equipment room without further assessment",
+      "Wait for the next scheduled break to reassess",
+      "Offer water and return the worker to removal once sweating resumes"
     ],
     "correct": 0,
     "explanation": "Altered mental status during heat exposure can signal a medical emergency. Obtain emergency help, move the worker out of the heat safely, and begin appropriate cooling. Sweating does not rule out heat stroke.",
@@ -2465,16 +2465,16 @@ const QUESTIONS = [
     "legacyId": "Additional Safety Hazards|A worker in full protective clothing becomes confused, unsteady, and stops sweating in a hot containment. What should the supervisor do?",
     "kind": "Scenario",
     "sourceLabel": "OSHA — heat illness and first aid",
-    "rationale": "Do not delay emergency action for the end of a shift, a temperature measurement, or an assumption that drinking water alone will resolve the problem."
+    "rationale": "Confusion and unsteadiness in heat require emergency action. Waiting for a break, resting without assessment, or sending the worker back after water or sweating resumes can delay essential treatment."
   },
   {
     "category": "Regulations",
     "q": "Under the asbestos NESHAP, who must thoroughly inspect an affected facility for asbestos before a demolition or renovation begins?",
     "a": [
       "The owner or operator of the demolition or renovation activity",
-      "The waste transporter, regardless of the owner/operator's actions",
-      "Only the employees who will remove the material",
-      "Only the laboratory that receives submitted samples"
+      "The asbestos waste transporter",
+      "The employees performing the removal",
+      "The laboratory that will analyze clearance samples"
     ],
     "correct": 0,
     "explanation": "The asbestos NESHAP requires the owner or operator to thoroughly inspect the affected facility or affected part of the facility before regulated demolition or renovation.",
@@ -2483,7 +2483,7 @@ const QUESTIONS = [
     "legacyId": "Regulations|Under the asbestos NESHAP, who must thoroughly inspect an affected facility for asbestos before a demolition or renovation begins?",
     "kind": "Scenario",
     "sourceLabel": "EPA §61.145 — demolition and renovation",
-    "rationale": "The owner/operator has the inspection obligation; subcontracting parts of the job does not make it solely a transporter, worker, or laboratory duty."
+    "rationale": "The owner or operator has the inspection responsibility. The transporter, removal employees, or clearance laboratory do not assume that duty simply by taking part in the project."
   },
   {
     "category": "Regulations",
@@ -2508,9 +2508,9 @@ const QUESTIONS = [
     "q": "Who is an accredited asbestos project designer under the federal model accreditation framework?",
     "a": [
       "A person trained and accredited to design response actions for schools or public and commercial buildings",
-      "A person holding only worker accreditation",
-      "A person holding only building-inspector accreditation",
-      "A supervisor whose accreditation automatically covers design"
+      "An accredited worker who signs the daily log",
+      "A licensed waste hauler who selects the landfill",
+      "An inspector who collects one bulk sample"
     ],
     "correct": 0,
     "explanation": "EPA's accreditation framework establishes a distinct project-designer discipline for designing asbestos response actions.",
@@ -2519,16 +2519,16 @@ const QUESTIONS = [
     "legacyId": "Regulations|Who is an accredited asbestos project designer under the federal model accreditation framework?",
     "kind": "Scenario",
     "sourceLabel": "EPA Model Accreditation Plan — project designers",
-    "rationale": "Worker, inspector, and supervisor accreditation do not automatically confer the separate project-designer accreditation."
+    "rationale": "Project design is a distinct accreditation discipline. A worker, waste hauler, or inspector does not gain design accreditation merely by performing those roles."
   },
   {
     "category": "Legal Considerations",
     "q": "A supervisor discovers that a required NJ worker permit has expired during an active project. What is the proper response?",
     "a": [
       "Remove the employee from regulated asbestos work until valid authorization is restored",
-      "Allow work while a renewal application is being prepared",
-      "Allow work under the supervisor's permit",
-      "Rely on the employee's training certificate instead of a current permit"
+      "Keep the worker in containment while a renewal application is pending",
+      "Allow the worker to finish the shift under the supervisor's permit",
+      "Record the expired permit and continue if training remains current"
     ],
     "correct": 0,
     "explanation": "Personnel performing covered asbestos work must hold current required permits; falsifying or sharing credentials is not an acceptable substitute.",
@@ -2537,7 +2537,7 @@ const QUESTIONS = [
     "legacyId": "Legal Considerations|A supervisor discovers that a required NJ worker permit has expired during an active project. What is the proper response?",
     "kind": "Scenario",
     "sourceLabel": "NJ Asbestos Control and Licensing Act and N.J.A.C. 12:120",
-    "rationale": "A pending application, someone else’s permit, or a training certificate is not a substitute for a valid required permit."
+    "rationale": "A renewal application, a supervisor's permit, or current training is not a substitute for the required valid individual permit."
   },
   {
     "category": "Legal Considerations",
@@ -2562,9 +2562,9 @@ const QUESTIONS = [
     "q": "A worker reports visible debris outside containment. What should the competent person do first?",
     "a": [
       "Stop or restrict affected work, secure the area, and evaluate and correct the breach",
-      "Continue removal while arranging an end-of-shift cleanup",
-      "Wait for final clearance samples to locate the source",
-      "Ask workers to wear stronger respirators while leaving the breach open"
+      "Wait for final clearance before inspecting the area",
+      "Increase negative air inside without examining the opening",
+      "Have the worker clean it during the next shift"
     ],
     "correct": 0,
     "explanation": "The competent person must act promptly to identify and correct asbestos hazards and prevent further migration or exposure.",
@@ -2573,16 +2573,16 @@ const QUESTIONS = [
     "legacyId": "Supervisory|A worker reports visible debris outside containment. What should the competent person do first?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "Secure and evaluate the suspected migration promptly. End-of-shift cleanup, later clearance, or stronger respirators alone leaves the breach unresolved."
+    "rationale": "Secure, evaluate, and correct the suspected breach promptly. Later clearance, increasing airflow without inspecting the breach, and postponing cleanup do not resolve the immediate concern."
   },
   {
     "category": "Supervisory",
     "q": "A subcontractor proposes a faster removal method that is not covered by the exposure assessment or work plan. What should the supervisor do?",
     "a": [
       "Pause the change and evaluate the method, exposure, and required controls before authorizing it",
-      "Approve it because the subcontractor used it on another building",
-      "Try it for one shift before evaluating exposure",
-      "Accept a worker's seal check as proof that the new method is safe"
+      "Use the prior assessment if the same ACM is involved",
+      "Try the new method for one shift before revising controls",
+      "Accept the method if a respirator is worn"
     ],
     "correct": 0,
     "explanation": "Changed methods can change exposures and required controls; the competent person must evaluate the conditions before work proceeds.",
@@ -2591,7 +2591,7 @@ const QUESTIONS = [
     "legacyId": "Supervisory|A subcontractor proposes a faster removal method that is not covered by the exposure assessment or work plan. What should the supervisor do?",
     "kind": "Scenario",
     "sourceLabel": "OSHA §1926.1101(o) — competent person",
-    "rationale": "Past use elsewhere, a trial shift, or a seal check is not an assessment of the proposed operation’s exposure and controls."
+    "rationale": "A changed method can change exposure and controls. The same material, a one-shift trial, or wearing a respirator does not establish that the proposed method is covered by the existing assessment."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
@@ -2634,9 +2634,9 @@ const QUESTIONS = [
     "q": "Where should a worker remove contaminated disposable protective clothing when exiting a Class I regulated area?",
     "a": [
       "In the equipment room",
-      "In the clean room before entering the shower",
-      "In the shower after carrying contaminated clothing through it",
-      "At the clean exit after showering"
+      "In the shower after removing the respirator",
+      "In the clean room before changing into street clothes",
+      "In the waste load-out area after bagging debris"
     ],
     "correct": 0,
     "explanation": "The equipment room is the contaminated change area used for removing and containing work clothing and equipment.",
@@ -2645,7 +2645,7 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Where should a worker remove contaminated disposable protective clothing when exiting a Class I regulated area?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(j) — hygiene facilities and practices",
-    "rationale": "Removing contaminated clothing on the clean side spreads contamination; use the equipment room before entering the shower."
+    "rationale": "The equipment room is the contaminated change area before showering. The clean room and waste route are not substitutes, and contaminated clothing is not carried into the shower for removal after taking off the respirator."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
@@ -2670,9 +2670,9 @@ const QUESTIONS = [
     "q": "Where are employees' street clothes and uncontaminated personal items kept in a three-stage decontamination facility?",
     "a": [
       "In the clean room",
-      "In the equipment room beside contaminated coveralls",
-      "In the shower room on the contaminated side",
-      "At the work-area entrance inside containment"
+      "In the equipment room in a closed locker",
+      "In the shower room beyond the contaminated side",
+      "Inside containment beneath a protective dropcloth"
     ],
     "correct": 0,
     "explanation": "The clean room is equipped for changing into and out of street clothing and must remain free of asbestos contamination.",
@@ -2681,7 +2681,7 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Where are employees' street clothes and uncontaminated personal items kept in a three-stage decontamination facility?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(j) — hygiene facilities and practices",
-    "rationale": "Street clothes belong on the clean side; equipment and work-area locations are contaminated transitions."
+    "rationale": "Street clothes belong on the clean side. A locker in the contaminated equipment room, a shower location, or a dropcloth inside containment does not make the area clean."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
@@ -2706,9 +2706,9 @@ const QUESTIONS = [
     "q": "For Class I work requiring the full three-stage decontamination area, what is OSHA’s standard location arrangement?",
     "a": [
       "Adjacent and connected to it",
-      "At any convenient location if workers wear respirators",
-      "Only on the clean side, without a controlled connection",
-      "At the project entrance regardless of the work area's location"
+      "Nearby but across an occupied corridor",
+      "At the same facility with no direct connection",
+      "Inside the waste truck loading area"
     ],
     "correct": 0,
     "explanation": "The standard arrangement is adjacent and connected to the regulated area, with an equipment room, shower, and clean room in series. OSHA also specifies procedures for cases where an adjacent shower is not feasible.",
@@ -2717,7 +2717,7 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|How must a required Class I personnel decontamination area be located in relation to the regulated area?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1926.1101(j) — hygiene facilities and practices",
-    "rationale": "A convenient location without a controlled route does not meet the standard arrangement. The non-adjacent-shower provisions require additional procedures; they are not an unrestricted location choice."
+    "rationale": "The standard full-unit arrangement is adjacent and connected. A public corridor, general proximity, or waste-loading area does not meet that arrangement; any allowed non-adjacent-shower procedure has additional conditions."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
@@ -2742,9 +2742,9 @@ const QUESTIONS = [
     "q": "Under OSHA sanitation requirements, what shower capacity is generally required when employees must shower during the same shift?",
     "a": [
       "At least one shower for each 10 employees of each sex, or numerical fraction thereof",
-      "One for every 15 employees of each sex",
-      "One for every 20 employees of each sex",
-      "One per project regardless of crew size"
+      "At least one shower for every 10 employees total, regardless of sex",
+      "At least one shower for every 20 employees of each sex",
+      "Exactly one shower per work area regardless of crew size"
     ],
     "correct": 0,
     "explanation": "OSHA's sanitation rule generally requires one shower for each 10 employees of each sex, or numerical fraction thereof, who must shower during the same shift.",
@@ -2753,7 +2753,7 @@ const QUESTIONS = [
     "legacyId": "Work Practices, Procedures, and Disposal|Under OSHA sanitation requirements, what shower capacity is generally required when employees must shower during the same shift?",
     "kind": "Recall",
     "sourceLabel": "OSHA §1910.141(d)(3), incorporated by §1926.1101(j)(1)(i)(B)",
-    "rationale": "The ratio is one per ten employees of each sex or fraction thereof who must shower during the shift, not one per project."
+    "rationale": "Count one shower per ten employees of each sex, or fraction thereof, who must shower during the shift. Do not combine all sexes into one count, use a twenty-person ratio, or assume one shower always suffices."
   },
   {
     "category": "Work Practices, Procedures, and Disposal",
